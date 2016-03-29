@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v1_3\Audio.qsys --block-symbol-file --output-directory=C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v1_3\Audio --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Altera_Karaoke_DE1_Quartus_15_1_v1_3/Audio.qsys
+Progress: Reading input file
+Progress: Adding audio_0 [altera_up_avalon_audio 15.1]
+Progress: Parameterizing module audio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v1_3\Audio.qsys --synthesis=VERILOG --output-directory=C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v1_3\Audio\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Altera_Karaoke_DE1_Quartus_15_1_v1_3/Audio.qsys
+Progress: Reading input file
+Progress: Adding audio_0 [altera_up_avalon_audio 15.1]
+Progress: Parameterizing module audio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Audio: Generating Audio "Audio" for QUARTUS_SYNTH
+Info: audio_0: Starting Generation of Audio Controller
+Info: audio_0: "Audio" instantiated altera_up_avalon_audio "audio_0"
+Info: Audio: Done "Audio" with 2 modules, 7 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

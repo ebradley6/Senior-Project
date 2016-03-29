@@ -1,0 +1,188 @@
+Flow report for DE1_SOC_golden_top
+Thu Mar 24 01:37:07 2016
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Thu Mar 24 01:31:47 2016       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; DE1_SOC_golden_top                          ;
+; Top-level Entity Name           ; DE1_SOC_golden_top                          ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 12,927 / 32,070 ( 40 % )                    ;
+; Total registers                 ; 26619                                       ;
+; Total pins                      ; 369 / 457 ( 81 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 1,972,352 / 4,065,280 ( 49 % )              ;
+; Total DSP Blocks                ; 35 / 87 ( 40 % )                            ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 3 / 6 ( 50 % )                              ;
+; Total DLLs                      ; 1 / 4 ( 25 % )                              ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/24/2016 00:35:03 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; DE1_SOC_golden_top  ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                               ;
++---------------------------------------------------+----------------------------------------------------------------------------+---------------+----------------------------------+------------+
+; Assignment Name                                   ; Value                                                                      ; Default Value ; Entity Name                      ; Section Id ;
++---------------------------------------------------+----------------------------------------------------------------------------+---------------+----------------------------------+------------+
+; COMPILER_SIGNATURE_ID                             ; 220083049924901.145879406600472                                            ; --            ; --                               ; --         ;
+; ECO_REGENERATE_REPORT                             ; On                                                                         ; Off           ; --                               ; --         ;
+; FITTER_EFFORT                                     ; Standard Fit                                                               ; Auto Fit      ; --                               ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/system.pre.h                   ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/hps.pre.xml                              ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; HPS_PARTITION                                     ; On                                                                         ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
+; MAX_CORE_JUNCTION_TEMP                            ; 85                                                                         ; --            ; --                               ; --         ;
+; MIN_CORE_JUNCTION_TEMP                            ; 0                                                                          ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; AudioClk/synthesis/../AudioClk.cmp                                         ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; AudioClk/synthesis/../../AudioClk.qsys                                     ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; Audio/synthesis/../Audio.cmp                                               ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; Audio/synthesis/../../Audio.qsys                                           ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/../DE1_SoC_QSYS.cmp                                 ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/../../C                                             ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS_hps_0_hps.svd                          ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/../../DE1_SoC_QSYS.qsys                             ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/system.pre.h                   ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; --                               ; --         ;
+; MISC_FILE                                         ; DE1_SoC_QSYS/synthesis/submodules/hps.pre.xml                              ; --            ; --                               ; --         ;
+; OPTIMIZATION_TECHNIQUE                            ; Speed                                                                      ; Balanced      ; --                               ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS                    ; Half Signal Swing                                                          ; --            ; --                               ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS                    ; Half Signal Swing                                                          ; --            ; --                               ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS                   ; Half Vccio                                                                 ; --            ; --                               ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS                   ; Half Vccio                                                                 ; --            ; --                               ; --         ;
+; PARTITION_COLOR                                   ; 16764057                                                                   ; --            ; --                               ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL               ; PLACEMENT_AND_ROUTING                                                      ; --            ; --                               ; Top        ;
+; PARTITION_NETLIST_TYPE                            ; SOURCE                                                                     ; --            ; --                               ; Top        ;
+; PHYSICAL_SYNTHESIS_ASYNCHRONOUS_SIGNAL_PIPELINING ; On                                                                         ; Off           ; --                               ; --         ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC                    ; On                                                                         ; Off           ; --                               ; --         ;
+; PHYSICAL_SYNTHESIS_EFFORT                         ; Extra                                                                      ; Normal        ; --                               ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION           ; On                                                                         ; Off           ; --                               ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING              ; On                                                                         ; Off           ; --                               ; --         ;
+; POWER_BOARD_THERMAL_MODEL                         ; None (CONSERVATIVE)                                                        ; --            ; --                               ; --         ;
+; POWER_PRESET_COOLING_SOLUTION                     ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                      ; --            ; --                               ; --         ;
+; SEARCH_PATH                                       ; software/ControlPanel/mem_init/                                            ; --            ; --                               ; --         ;
+; SLD_FILE                                          ; AudioClk/synthesis/AudioClk.debuginfo                                      ; --            ; --                               ; --         ;
+; SLD_FILE                                          ; Audio/synthesis/Audio.debuginfo                                            ; --            ; --                               ; --         ;
+; SLD_FILE                                          ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS.regmap                                 ; --            ; --                               ; --         ;
+; SLD_FILE                                          ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS.debuginfo                              ; --            ; --                               ; --         ;
+; SLD_INFO                                          ; QSYS_NAME Audio HAS_SOPCINFO 1 GENERATION_ID 1458787544                    ; --            ; Audio                            ; --         ;
+; SLD_INFO                                          ; QSYS_NAME AudioClk HAS_SOPCINFO 1 GENERATION_ID 1458787627                 ; --            ; AudioClk                         ; --         ;
+; SLD_INFO                                          ; QSYS_NAME DE1_SoC_QSYS HAS_SOPCINFO 1 GENERATION_ID 1458780102             ; --            ; DE1_SoC_QSYS                     ; --         ;
+; SOPCINFO_FILE                                     ; AudioClk/synthesis/../../AudioClk.sopcinfo                                 ; --            ; --                               ; --         ;
+; SOPCINFO_FILE                                     ; Audio/synthesis/../../Audio.sopcinfo                                       ; --            ; --                               ; --         ;
+; SOPCINFO_FILE                                     ; DE1_SoC_QSYS/synthesis/../../DE1_SoC_QSYS.sopcinfo                         ; --            ; --                               ; --         ;
+; SYNTHESIS_ONLY_QIP                                ; On                                                                         ; --            ; --                               ; --         ;
+; SYNTHESIS_ONLY_QIP                                ; On                                                                         ; --            ; --                               ; --         ;
+; SYNTHESIS_ONLY_QIP                                ; On                                                                         ; --            ; --                               ; --         ;
++---------------------------------------------------+----------------------------------------------------------------------------+---------------+----------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:08:54     ; 1.0                     ; 2071 MB             ; 00:09:51                           ;
+; Fitter                    ; 00:33:23     ; 1.2                     ; 4694 MB             ; 00:50:49                           ;
+; Assembler                 ; 00:02:07     ; 1.0                     ; 1221 MB             ; 00:02:07                           ;
+; TimeQuest Timing Analyzer ; 00:05:06     ; 1.5                     ; 2567 MB             ; 00:07:03                           ;
+; Total                     ; 00:49:30     ; --                      ; --                  ; 01:09:50                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Godzilla         ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; Godzilla         ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; Godzilla         ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Godzilla         ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off DE1_SOC_golden_top -c DE1_SOC_golden_top
+quartus_fit --read_settings_files=off --write_settings_files=off DE1_SOC_golden_top -c DE1_SOC_golden_top
+quartus_asm --read_settings_files=off --write_settings_files=off DE1_SOC_golden_top -c DE1_SOC_golden_top
+quartus_sta DE1_SOC_golden_top -c DE1_SOC_golden_top
+
+
+
