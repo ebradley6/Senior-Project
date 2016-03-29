@@ -1,0 +1,17 @@
+module DSP(
+				valid,
+				ready,
+				stream_in,
+				stream_out
+				);
+				
+input 	      valid;
+input 		   ready;
+input   [31:0] stream_in;
+output  [23:0] stream_out;
+
+begin
+	stream_out=stream_in[23:0];
+end
+
+endmodule

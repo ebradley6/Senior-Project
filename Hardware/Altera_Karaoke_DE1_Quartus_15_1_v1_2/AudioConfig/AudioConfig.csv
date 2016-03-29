@@ -1,0 +1,17 @@
+# system info AudioConfig on 2016.02.21.20:45:36
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1456105535
+#
+#
+# Files generated for AudioConfig on 2016.02.21.20:45:36
+files:
+filepath,kind,attributes,module,is_top
+simulation/AudioConfig.vhd,VHDL,,AudioConfig,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+AudioConfig.audio_and_video_config_0,AudioConfig_audio_and_video_config_0
