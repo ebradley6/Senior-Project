@@ -7,13 +7,39 @@
  <global>
   <pin name="clk" direction="input" scope="external" />
   <pin name="reset" direction="input" scope="external" />
-  <pin name="address[1..0]" direction="input" scope="external" />
-  <pin name="chipselect" direction="input" scope="external" />
-  <pin name="read" direction="input" scope="external" />
-  <pin name="write" direction="input" scope="external" />
-  <pin name="writedata[31..0]" direction="input" scope="external" />
-  <pin name="readdata[31..0]" direction="output" scope="external" />
-  <pin name="irq" direction="output" scope="external" />
+  <pin name="from_adc_left_channel_ready" direction="input" scope="external" />
+  <pin
+     name="from_adc_left_channel_data[31..0]"
+     direction="output"
+     scope="external" />
+  <pin
+     name="from_adc_left_channel_valid"
+     direction="output"
+     scope="external" />
+  <pin
+     name="from_adc_right_channel_ready"
+     direction="input"
+     scope="external" />
+  <pin
+     name="from_adc_right_channel_data[31..0]"
+     direction="output"
+     scope="external" />
+  <pin
+     name="from_adc_right_channel_valid"
+     direction="output"
+     scope="external" />
+  <pin
+     name="to_dac_left_channel_data[31..0]"
+     direction="input"
+     scope="external" />
+  <pin name="to_dac_left_channel_valid" direction="input" scope="external" />
+  <pin name="to_dac_left_channel_ready" direction="output" scope="external" />
+  <pin
+     name="to_dac_right_channel_data[31..0]"
+     direction="input"
+     scope="external" />
+  <pin name="to_dac_right_channel_valid" direction="input" scope="external" />
+  <pin name="to_dac_right_channel_ready" direction="output" scope="external" />
   <pin name="AUD_ADCDAT" direction="input" scope="external" />
   <pin name="AUD_ADCLRCK" direction="input" scope="external" />
   <pin name="AUD_BCLK" direction="input" scope="external" />

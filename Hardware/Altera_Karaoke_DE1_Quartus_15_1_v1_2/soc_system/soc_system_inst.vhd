@@ -1,6 +1,7 @@
 	component soc_system is
 		port (
 			clk_clk                                     : in    std_logic                     := 'X';             -- clk
+			clk_1_clk                                   : in    std_logic                     := 'X';             -- clk
 			fifo_0_out_valid                            : out   std_logic;                                        -- valid
 			fifo_0_out_data                             : out   std_logic_vector(31 downto 0);                    -- data
 			fifo_0_out_ready                            : in    std_logic                     := 'X';             -- ready
@@ -80,18 +81,18 @@
 			memory_oct_rzqin                            : in    std_logic                     := 'X';             -- oct_rzqin
 			play_out_0_external_connection_export       : out   std_logic;                                        -- export
 			reset_reset_n                               : in    std_logic                     := 'X';             -- reset_n
+			reset_1_reset_n                             : in    std_logic                     := 'X';             -- reset_n
 			vol_ctrl_0_external_connection_export       : out   std_logic_vector(6 downto 0);                     -- export
 			vol_flag_out_0_external_connection_export   : out   std_logic;                                        -- export
 			vol_flag_rr_in_0_external_connection_export : in    std_logic                     := 'X';             -- export
-			vol_set_in_0_external_connection_export     : in    std_logic                     := 'X';             -- export
-			clk_1_clk                                   : in    std_logic                     := 'X';             -- clk
-			reset_1_reset_n                             : in    std_logic                     := 'X'              -- reset_n
+			vol_set_in_0_external_connection_export     : in    std_logic                     := 'X'              -- export
 		);
 	end component soc_system;
 
 	u0 : component soc_system
 		port map (
 			clk_clk                                     => CONNECTED_TO_clk_clk,                                     --                                  clk.clk
+			clk_1_clk                                   => CONNECTED_TO_clk_1_clk,                                   --                                clk_1.clk
 			fifo_0_out_valid                            => CONNECTED_TO_fifo_0_out_valid,                            --                           fifo_0_out.valid
 			fifo_0_out_data                             => CONNECTED_TO_fifo_0_out_data,                             --                                     .data
 			fifo_0_out_ready                            => CONNECTED_TO_fifo_0_out_ready,                            --                                     .ready
@@ -171,11 +172,10 @@
 			memory_oct_rzqin                            => CONNECTED_TO_memory_oct_rzqin,                            --                                     .oct_rzqin
 			play_out_0_external_connection_export       => CONNECTED_TO_play_out_0_external_connection_export,       --       play_out_0_external_connection.export
 			reset_reset_n                               => CONNECTED_TO_reset_reset_n,                               --                                reset.reset_n
+			reset_1_reset_n                             => CONNECTED_TO_reset_1_reset_n,                             --                              reset_1.reset_n
 			vol_ctrl_0_external_connection_export       => CONNECTED_TO_vol_ctrl_0_external_connection_export,       --       vol_ctrl_0_external_connection.export
 			vol_flag_out_0_external_connection_export   => CONNECTED_TO_vol_flag_out_0_external_connection_export,   --   vol_flag_out_0_external_connection.export
 			vol_flag_rr_in_0_external_connection_export => CONNECTED_TO_vol_flag_rr_in_0_external_connection_export, -- vol_flag_rr_in_0_external_connection.export
-			vol_set_in_0_external_connection_export     => CONNECTED_TO_vol_set_in_0_external_connection_export,     --     vol_set_in_0_external_connection.export
-			clk_1_clk                                   => CONNECTED_TO_clk_1_clk,                                   --                                clk_1.clk
-			reset_1_reset_n                             => CONNECTED_TO_reset_1_reset_n                              --                              reset_1.reset_n
+			vol_set_in_0_external_connection_export     => CONNECTED_TO_vol_set_in_0_external_connection_export      --     vol_set_in_0_external_connection.export
 		);
 

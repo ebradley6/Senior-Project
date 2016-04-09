@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="AudioClk" kind="system" version="15.1" fabric="QSYS">
  <!-- Format version 15.1 185 (Future versions may contain additional information.) -->
- <!-- 2016.02.07.13:54:52 -->
+ <!-- 2016.04.02.21:22:34 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1454871287</value>
+  <value>1459646551</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -101,7 +101,7 @@
  </parameter>
  <parameter name="projectName">
   <type>java.lang.String</type>
-  <value></value>
+  <value>soc_system.qpf</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -172,7 +172,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="audio_clk_freq">
    <type>double</type>
-   <value>12.288</value>
+   <value>18.432</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -325,7 +325,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="clockRate">
     <type>long</type>
-    <value>12288135</value>
+    <value>18432203</value>
     <derived>false</derived>
     <enabled>true</enabled>
     <visible>true</visible>
@@ -483,5 +483,5 @@ parameters are a RESULT of the module parameters. -->
   <version>15.1</version>
  </plugin>
  <reportVersion>15.1 185</reportVersion>
- <uniqueIdentifier>E839DF94162900000152BD161D67</uniqueIdentifier>
+ <uniqueIdentifier>E4CE8F0C7BAD00000153D9B6D81C</uniqueIdentifier>
 </EnsembleReport>

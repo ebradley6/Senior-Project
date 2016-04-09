@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Mar 22 18:38:57 2016
+Analysis & Synthesis Status : Successful - Tue Apr 05 21:36:31 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : soc_system
-Top-level Entity Name : ghrd_top
+Top-level Entity Name : Altera_Karaoke_DE1_Quartus_15_1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 3279
-Total pins : 369
+Total registers : 4945
+Total pins : 148
 Total virtual pins : 0
-Total block memory bits : 533,504
+Total block memory bits : 550,912
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

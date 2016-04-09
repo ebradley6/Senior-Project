@@ -322,8 +322,8 @@
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
  <module name="clk_1" kind="clock_source" version="15.1" enabled="1">
-  <parameter name="clockFrequency" value="12288000" />
-  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="clockFrequency" value="18432000" />
+  <parameter name="clockFrequencyKnown" value="false" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
@@ -951,7 +951,7 @@
    version="15.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName">$${FILENAME}_onchip_memory2_0</parameter>
+  <parameter name="autoInitializationFileName">soc_system_onchip_memory2_0</parameter>
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="64" />

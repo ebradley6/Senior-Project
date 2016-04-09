@@ -1,6 +1,6 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_2\Audio.qsys --block-symbol-file --output-directory=C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_2\Audio --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio.qsys
+Info: qsys-generate C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_t\Audio.qsys --block-symbol-file --output-directory=C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_t\Audio --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio.qsys
 Progress: Reading input file
 Progress: Adding audio_0 [altera_up_avalon_audio 15.1]
 Progress: Parameterizing module audio_0
@@ -12,8 +12,8 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_2\Audio.qsys --synthesis=VERILOG --greybox --output-directory=C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_2\Audio\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
-Progress: Loading Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio.qsys
+Info: qsys-generate C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_t\Audio.qsys --synthesis=VERILOG --greybox --output-directory=C:\SeniorProject\Altera_Karaoke_DE1_Quartus_15_1_v_t\Audio\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio.qsys
 Progress: Reading input file
 Progress: Adding audio_0 [altera_up_avalon_audio 15.1]
 Progress: Parameterizing module audio_0

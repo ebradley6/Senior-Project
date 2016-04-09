@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2016.03.21.19:55:46"
- outputDirectory="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/">
+ date="2016.03.27.00:56:31"
+ outputDirectory="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/">
  <perimeter>
   <parameter
      name="AUTO_GENERATION_ID"
@@ -51,50 +51,121 @@
      defaultValue="-1"
      onHdl="0"
      affectsHdl="1" />
-  <interface name="avalon_audio_slave" kind="avalon" start="0">
-   <property name="addressAlignment" value="DYNAMIC" />
-   <property name="addressGroup" value="0" />
-   <property name="addressSpan" value="16" />
-   <property name="addressUnits" value="WORDS" />
-   <property name="alwaysBurstMaxBurst" value="false" />
+  <interface name="avalon_left_channel_sink" kind="avalon_streaming" start="0">
    <property name="associatedClock" value="clk" />
    <property name="associatedReset" value="reset" />
-   <property name="bitsPerSymbol" value="8" />
-   <property name="bridgedAddressOffset" value="0" />
-   <property name="bridgesToMaster" value="" />
-   <property name="burstOnBurstBoundariesOnly" value="false" />
-   <property name="burstcountUnits" value="WORDS" />
-   <property name="constantBurstBehavior" value="false" />
-   <property name="explicitAddressSpan" value="0" />
-   <property name="holdTime" value="0" />
-   <property name="interleaveBursts" value="false" />
-   <property name="isBigEndian" value="false" />
-   <property name="isFlash" value="false" />
-   <property name="isMemoryDevice" value="false" />
-   <property name="isNonVolatileStorage" value="false" />
-   <property name="linewrapBursts" value="false" />
-   <property name="maximumPendingReadTransactions" value="0" />
-   <property name="maximumPendingWriteTransactions" value="0" />
-   <property name="minimumUninterruptedRunLength" value="1" />
-   <property name="printableDevice" value="false" />
-   <property name="readLatency" value="1" />
-   <property name="readWaitStates" value="0" />
-   <property name="readWaitTime" value="0" />
-   <property name="registerIncomingSignals" value="false" />
-   <property name="registerOutgoingSignals" value="false" />
-   <property name="setupTime" value="0" />
-   <property name="timingUnits" value="Cycles" />
-   <property name="transparentBridge" value="false" />
-   <property name="wellBehavedWaitrequest" value="false" />
-   <property name="writeLatency" value="0" />
-   <property name="writeWaitStates" value="0" />
-   <property name="writeWaitTime" value="0" />
-   <port name="address" direction="input" role="address" width="2" />
-   <port name="chipselect" direction="input" role="chipselect" width="1" />
-   <port name="read" direction="input" role="read" width="1" />
-   <port name="write" direction="input" role="write" width="1" />
-   <port name="writedata" direction="input" role="writedata" width="32" />
-   <port name="readdata" direction="output" role="readdata" width="32" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port
+       name="to_dac_left_channel_data"
+       direction="input"
+       role="data"
+       width="32" />
+   <port
+       name="to_dac_left_channel_valid"
+       direction="input"
+       role="valid"
+       width="1" />
+   <port
+       name="to_dac_left_channel_ready"
+       direction="output"
+       role="ready"
+       width="1" />
+  </interface>
+  <interface name="avalon_left_channel_source" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port
+       name="from_adc_left_channel_ready"
+       direction="input"
+       role="ready"
+       width="1" />
+   <port
+       name="from_adc_left_channel_data"
+       direction="output"
+       role="data"
+       width="32" />
+   <port
+       name="from_adc_left_channel_valid"
+       direction="output"
+       role="valid"
+       width="1" />
+  </interface>
+  <interface name="avalon_right_channel_sink" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port
+       name="to_dac_right_channel_data"
+       direction="input"
+       role="data"
+       width="32" />
+   <port
+       name="to_dac_right_channel_valid"
+       direction="input"
+       role="valid"
+       width="1" />
+   <port
+       name="to_dac_right_channel_ready"
+       direction="output"
+       role="ready"
+       width="1" />
+  </interface>
+  <interface name="avalon_right_channel_source" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="1" />
+   <port
+       name="from_adc_right_channel_ready"
+       direction="input"
+       role="ready"
+       width="1" />
+   <port
+       name="from_adc_right_channel_data"
+       direction="output"
+       role="data"
+       width="32" />
+   <port
+       name="from_adc_right_channel_valid"
+       direction="output"
+       role="valid"
+       width="1" />
   </interface>
   <interface name="clk" kind="clock" start="0">
    <property name="clockRate" value="0" />
@@ -111,15 +182,6 @@
    <port name="AUD_DACDAT" direction="output" role="DACDAT" width="1" />
    <port name="AUD_DACLRCK" direction="input" role="DACLRCK" width="1" />
   </interface>
-  <interface name="interrupt" kind="interrupt" start="0">
-   <property name="associatedAddressablePoint" value="Audio.avalon_audio_slave" />
-   <property name="associatedClock" value="clk" />
-   <property name="associatedReset" value="reset" />
-   <property name="bridgedReceiverOffset" value="0" />
-   <property name="bridgesToReceiver" value="" />
-   <property name="irqScheme" value="NONE" />
-   <port name="irq" direction="output" role="irq" width="1" />
-  </interface>
   <interface name="reset" kind="reset" start="0">
    <property name="associatedClock" value="clk" />
    <property name="synchronousEdges" value="DEASSERT" />
@@ -128,13 +190,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="Audio:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1458604545,AUTO_UNIQUE_ID=(altera_up_avalon_audio:15.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,audio_in=true,audio_out=true,avalon_bus_type=Memory Mapped,dw=32)"
+   parameterizationKey="Audio:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEMA5F31C6,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1459054590,AUTO_UNIQUE_ID=(altera_up_avalon_audio:15.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,audio_in=true,audio_out=true,avalon_bus_type=Streaming,dw=32)"
    instancePathKey="Audio"
    kind="Audio"
    version="1.0"
    name="Audio">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1458604545" />
+  <parameter name="AUTO_GENERATION_ID" value="1459054590" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -143,32 +205,32 @@
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <generatedFiles>
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/Audio.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/Audio.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_audio_bit_counter.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_audio_bit_counter.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_audio_in_deserializer.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_audio_in_deserializer.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_audio_out_serializer.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_audio_out_serializer.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_clock_edge.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_clock_edge.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_sync_fifo.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_sync_fifo.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/Audio_audio_0.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/Audio_audio_0.v"
        type="VERILOG" />
   </childGeneratedFiles>
   <sourceFiles>
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio.qsys" />
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio.qsys" />
   </sourceFiles>
   <childSourceFiles>
    <file
@@ -206,35 +268,35 @@
  </entity>
  <entity
    path="submodules/"
-   parameterizationKey="altera_up_avalon_audio:15.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,audio_in=true,audio_out=true,avalon_bus_type=Memory Mapped,dw=32"
+   parameterizationKey="altera_up_avalon_audio:15.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,audio_in=true,audio_out=true,avalon_bus_type=Streaming,dw=32"
    instancePathKey="Audio:.:audio_0"
    kind="altera_up_avalon_audio"
    version="15.1"
    name="Audio_audio_0">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
   <parameter name="dw" value="32" />
-  <parameter name="avalon_bus_type" value="Memory Mapped" />
+  <parameter name="avalon_bus_type" value="Streaming" />
   <parameter name="audio_in" value="true" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="audio_out" value="true" />
   <generatedFiles>
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_audio_bit_counter.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_audio_bit_counter.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_audio_in_deserializer.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_audio_in_deserializer.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_audio_out_serializer.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_audio_out_serializer.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_clock_edge.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_clock_edge.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/altera_up_sync_fifo.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/altera_up_sync_fifo.v"
        type="VERILOG" />
    <file
-       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_2/Audio/synthesis/submodules/Audio_audio_0.v"
+       path="C:/SeniorProject/Altera_Karaoke_DE1_Quartus_15_1_v_t/Audio/synthesis/submodules/Audio_audio_0.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles/>

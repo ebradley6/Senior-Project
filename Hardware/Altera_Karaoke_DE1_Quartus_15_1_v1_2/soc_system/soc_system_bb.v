@@ -1,6 +1,7 @@
 
 module soc_system (
 	clk_clk,
+	clk_1_clk,
 	fifo_0_out_valid,
 	fifo_0_out_data,
 	fifo_0_out_ready,
@@ -80,14 +81,14 @@ module soc_system (
 	memory_oct_rzqin,
 	play_out_0_external_connection_export,
 	reset_reset_n,
+	reset_1_reset_n,
 	vol_ctrl_0_external_connection_export,
 	vol_flag_out_0_external_connection_export,
 	vol_flag_rr_in_0_external_connection_export,
-	vol_set_in_0_external_connection_export,
-	clk_1_clk,
-	reset_1_reset_n);	
+	vol_set_in_0_external_connection_export);	
 
 	input		clk_clk;
+	input		clk_1_clk;
 	output		fifo_0_out_valid;
 	output	[31:0]	fifo_0_out_data;
 	input		fifo_0_out_ready;
@@ -167,10 +168,9 @@ module soc_system (
 	input		memory_oct_rzqin;
 	output		play_out_0_external_connection_export;
 	input		reset_reset_n;
+	input		reset_1_reset_n;
 	output	[6:0]	vol_ctrl_0_external_connection_export;
 	output		vol_flag_out_0_external_connection_export;
 	input		vol_flag_rr_in_0_external_connection_export;
 	input		vol_set_in_0_external_connection_export;
-	input		clk_1_clk;
-	input		reset_1_reset_n;
 endmodule

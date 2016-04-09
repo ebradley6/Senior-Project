@@ -38,30 +38,59 @@
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface
-   name="avalon_audio_slave"
-   internal="audio_0.avalon_audio_slave"
-   type="avalon"
-   dir="end">
-  <port name="address" internal="address" />
-  <port name="chipselect" internal="chipselect" />
-  <port name="read" internal="read" />
-  <port name="write" internal="write" />
-  <port name="writedata" internal="writedata" />
-  <port name="readdata" internal="readdata" />
- </interface>
+ <interface name="avalon_audio_slave" internal="audio_0.avalon_audio_slave" />
  <interface
    name="avalon_left_channel_sink"
-   internal="audio_0.avalon_left_channel_sink" />
+   internal="audio_0.avalon_left_channel_sink"
+   type="avalon_streaming"
+   dir="end">
+  <port name="to_dac_left_channel_data" internal="to_dac_left_channel_data" />
+  <port name="to_dac_left_channel_valid" internal="to_dac_left_channel_valid" />
+  <port name="to_dac_left_channel_ready" internal="to_dac_left_channel_ready" />
+ </interface>
  <interface
    name="avalon_left_channel_source"
-   internal="audio_0.avalon_left_channel_source" />
+   internal="audio_0.avalon_left_channel_source"
+   type="avalon_streaming"
+   dir="start">
+  <port
+     name="from_adc_left_channel_ready"
+     internal="from_adc_left_channel_ready" />
+  <port
+     name="from_adc_left_channel_data"
+     internal="from_adc_left_channel_data" />
+  <port
+     name="from_adc_left_channel_valid"
+     internal="from_adc_left_channel_valid" />
+ </interface>
  <interface
    name="avalon_right_channel_sink"
-   internal="audio_0.avalon_right_channel_sink" />
+   internal="audio_0.avalon_right_channel_sink"
+   type="avalon_streaming"
+   dir="end">
+  <port name="to_dac_right_channel_data" internal="to_dac_right_channel_data" />
+  <port
+     name="to_dac_right_channel_valid"
+     internal="to_dac_right_channel_valid" />
+  <port
+     name="to_dac_right_channel_ready"
+     internal="to_dac_right_channel_ready" />
+ </interface>
  <interface
    name="avalon_right_channel_source"
-   internal="audio_0.avalon_right_channel_source" />
+   internal="audio_0.avalon_right_channel_source"
+   type="avalon_streaming"
+   dir="start">
+  <port
+     name="from_adc_right_channel_ready"
+     internal="from_adc_right_channel_ready" />
+  <port
+     name="from_adc_right_channel_data"
+     internal="from_adc_right_channel_data" />
+  <port
+     name="from_adc_right_channel_valid"
+     internal="from_adc_right_channel_valid" />
+ </interface>
  <interface name="clk" internal="audio_0.clk" type="clock" dir="end">
   <port name="clk" internal="clk" />
  </interface>
@@ -76,13 +105,7 @@
   <port name="AUD_DACDAT" internal="AUD_DACDAT" />
   <port name="AUD_DACLRCK" internal="AUD_DACLRCK" />
  </interface>
- <interface
-   name="interrupt"
-   internal="audio_0.interrupt"
-   type="interrupt"
-   dir="end">
-  <port name="irq" internal="irq" />
- </interface>
+ <interface name="interrupt" internal="audio_0.interrupt" />
  <interface name="reset" internal="audio_0.reset" type="reset" dir="end">
   <port name="reset" internal="reset" />
  </interface>
@@ -96,7 +119,7 @@
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="audio_in" value="true" />
   <parameter name="audio_out" value="true" />
-  <parameter name="avalon_bus_type" value="Memory Mapped" />
+  <parameter name="avalon_bus_type" value="Streaming" />
   <parameter name="dw" value="32" />
  </module>
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />

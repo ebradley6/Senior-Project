@@ -2,12 +2,12 @@
 # 
 preplace inst Audio -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst Audio.audio_0 -pg 1 -lvl 1 -y 30
-preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)audio_0.reset,(SLAVE)Audio.reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)audio_0.avalon_left_channel_sink,(SLAVE)Audio.avalon_left_channel_sink) 1 0 1 NJ
-preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)audio_0.clk,(SLAVE)Audio.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)Audio.clk,(SLAVE)audio_0.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Audio</net_container>(MASTER)Audio.avalon_left_channel_source,(MASTER)audio_0.avalon_left_channel_source) 1 1 1 NJ
+preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)audio_0.external_interface,(SLAVE)Audio.external_interface) 1 0 1 NJ
 preplace netloc EXPORT<net_container>Audio</net_container>(MASTER)Audio.avalon_right_channel_source,(MASTER)audio_0.avalon_right_channel_source) 1 1 1 NJ
-preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)audio_0.avalon_right_channel_sink,(SLAVE)Audio.avalon_right_channel_sink) 1 0 1 NJ
-preplace netloc EXPORT<net_container>Audio</net_container>(MASTER)audio_0.avalon_left_channel_source,(MASTER)Audio.avalon_left_channel_source) 1 1 1 NJ
-preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)Audio.external_interface,(SLAVE)audio_0.external_interface) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)Audio.reset,(SLAVE)audio_0.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)Audio.avalon_left_channel_sink,(SLAVE)audio_0.avalon_left_channel_sink) 1 0 1 NJ
+preplace netloc EXPORT<net_container>Audio</net_container>(SLAVE)Audio.avalon_right_channel_sink,(SLAVE)audio_0.avalon_right_channel_sink) 1 0 1 NJ
 levelinfo -pg 1 0 170 760
 levelinfo -hier Audio 180 210 560

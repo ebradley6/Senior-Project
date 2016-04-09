@@ -1,5 +1,6 @@
 	soc_system u0 (
 		.clk_clk                                     (<connected-to-clk_clk>),                                     //                                  clk.clk
+		.clk_1_clk                                   (<connected-to-clk_1_clk>),                                   //                                clk_1.clk
 		.fifo_0_out_valid                            (<connected-to-fifo_0_out_valid>),                            //                           fifo_0_out.valid
 		.fifo_0_out_data                             (<connected-to-fifo_0_out_data>),                             //                                     .data
 		.fifo_0_out_ready                            (<connected-to-fifo_0_out_ready>),                            //                                     .ready
@@ -79,11 +80,10 @@
 		.memory_oct_rzqin                            (<connected-to-memory_oct_rzqin>),                            //                                     .oct_rzqin
 		.play_out_0_external_connection_export       (<connected-to-play_out_0_external_connection_export>),       //       play_out_0_external_connection.export
 		.reset_reset_n                               (<connected-to-reset_reset_n>),                               //                                reset.reset_n
+		.reset_1_reset_n                             (<connected-to-reset_1_reset_n>),                             //                              reset_1.reset_n
 		.vol_ctrl_0_external_connection_export       (<connected-to-vol_ctrl_0_external_connection_export>),       //       vol_ctrl_0_external_connection.export
 		.vol_flag_out_0_external_connection_export   (<connected-to-vol_flag_out_0_external_connection_export>),   //   vol_flag_out_0_external_connection.export
 		.vol_flag_rr_in_0_external_connection_export (<connected-to-vol_flag_rr_in_0_external_connection_export>), // vol_flag_rr_in_0_external_connection.export
-		.vol_set_in_0_external_connection_export     (<connected-to-vol_set_in_0_external_connection_export>),     //     vol_set_in_0_external_connection.export
-		.clk_1_clk                                   (<connected-to-clk_1_clk>),                                   //                                clk_1.clk
-		.reset_1_reset_n                             (<connected-to-reset_1_reset_n>)                              //                              reset_1.reset_n
+		.vol_set_in_0_external_connection_export     (<connected-to-vol_set_in_0_external_connection_export>)      //     vol_set_in_0_external_connection.export
 	);
 

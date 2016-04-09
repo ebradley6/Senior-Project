@@ -1,5 +1,5 @@
 Flow report for soc_system
-Tue Mar 22 18:43:36 2016
+Tue Apr 05 21:41:46 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar 22 18:42:33 2016       ;
+; Flow Status                     ; Successful - Tue Apr 05 21:40:39 2016       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; soc_system                                  ;
-; Top-level Entity Name           ; ghrd_top                                    ;
+; Top-level Entity Name           ; Altera_Karaoke_DE1_Quartus_15_1             ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 2,659 / 32,070 ( 8 % )                      ;
-; Total registers                 ; 3458                                        ;
-; Total pins                      ; 369 / 457 ( 81 % )                          ;
+; Logic utilization (in ALMs)     ; 3,815 / 32,070 ( 12 % )                     ;
+; Total registers                 ; 5181                                        ;
+; Total pins                      ; 148 / 457 ( 32 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 533,504 / 4,065,280 ( 13 % )                ;
+; Total block memory bits         ; 550,912 / 4,065,280 ( 14 % )                ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,84 +68,84 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/22/2016 18:34:30 ;
+; Start date & time ; 04/05/2016 21:31:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; soc_system          ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                               ;
-+---------------------------------------+--------------------------------------------------------------------------+---------------+--------------------------------+------------+
-; Assignment Name                       ; Value                                                                    ; Default Value ; Entity Name                    ; Section Id ;
-+---------------------------------------+--------------------------------------------------------------------------+---------------+--------------------------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 220083049924901.145868606103812                                          ; --            ; --                             ; --         ;
-; ECO_REGENERATE_REPORT                 ; On                                                                       ; Off           ; --                             ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/system.pre.h                   ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/hps.pre.xml                              ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; HPS_PARTITION                         ; On                                                                       ; --            ; soc_system_hps_0_hps_io_border ; --         ;
-; MAX_CORE_JUNCTION_TEMP                ; 85                                                                       ; --            ; --                             ; --         ;
-; MIN_CORE_JUNCTION_TEMP                ; 0                                                                        ; --            ; --                             ; --         ;
-; MISC_FILE                             ; AudioConfig/synthesis/../AudioConfig.cmp                                 ; --            ; --                             ; --         ;
-; MISC_FILE                             ; AudioConfig/synthesis/../../AudioConfig.qsys                             ; --            ; --                             ; --         ;
-; MISC_FILE                             ; AudioClk/synthesis/../AudioClk.cmp                                       ; --            ; --                             ; --         ;
-; MISC_FILE                             ; AudioClk/synthesis/../../AudioClk.qsys                                   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; Audio/synthesis/../Audio.cmp                                             ; --            ; --                             ; --         ;
-; MISC_FILE                             ; Audio/synthesis/../../Audio.qsys                                         ; --            ; --                             ; --         ;
-; MISC_FILE                             ; ip/altsource_probe/hps_reset_bb.v                                        ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/../soc_system.cmp                                   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/../../C                                             ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/soc_system_hps_0_hps.svd                            ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/../../soc_system.qsys                               ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/system.pre.h                   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; --                             ; --         ;
-; MISC_FILE                             ; soc_system/synthesis/submodules/hps.pre.xml                              ; --            ; --                             ; --         ;
-; PARTITION_COLOR                       ; 16764057                                                                 ; --            ; ghrd_top                       ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING                                                    ; --            ; ghrd_top                       ; Top        ;
-; PARTITION_NETLIST_TYPE                ; SOURCE                                                                   ; --            ; ghrd_top                       ; Top        ;
-; POWER_BOARD_THERMAL_MODEL             ; None (CONSERVATIVE)                                                      ; --            ; --                             ; --         ;
-; POWER_PRESET_COOLING_SOLUTION         ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                    ; --            ; --                             ; --         ;
-; SLD_FILE                              ; AudioConfig/synthesis/AudioConfig.debuginfo                              ; --            ; --                             ; --         ;
-; SLD_FILE                              ; AudioClk/synthesis/AudioClk.debuginfo                                    ; --            ; --                             ; --         ;
-; SLD_FILE                              ; Audio/synthesis/Audio.debuginfo                                          ; --            ; --                             ; --         ;
-; SLD_FILE                              ; soc_system/synthesis/soc_system.regmap                                   ; --            ; --                             ; --         ;
-; SLD_FILE                              ; soc_system/synthesis/soc_system.debuginfo                                ; --            ; --                             ; --         ;
-; SLD_INFO                              ; QSYS_NAME Audio HAS_SOPCINFO 1 GENERATION_ID 1458604545                  ; --            ; Audio                          ; --         ;
-; SLD_INFO                              ; QSYS_NAME AudioClk HAS_SOPCINFO 1 GENERATION_ID 1454871287               ; --            ; AudioClk                       ; --         ;
-; SLD_INFO                              ; QSYS_NAME AudioConfig HAS_SOPCINFO 1 GENERATION_ID 1456105587            ; --            ; AudioConfig                    ; --         ;
-; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1457400315             ; --            ; --                             ; --         ;
-; SOPCINFO_FILE                         ; AudioConfig/synthesis/../../AudioConfig.sopcinfo                         ; --            ; --                             ; --         ;
-; SOPCINFO_FILE                         ; AudioClk/synthesis/../../AudioClk.sopcinfo                               ; --            ; --                             ; --         ;
-; SOPCINFO_FILE                         ; Audio/synthesis/../../Audio.sopcinfo                                     ; --            ; --                             ; --         ;
-; SOPCINFO_FILE                         ; soc_system/synthesis/../../soc_system.sopcinfo                           ; --            ; --                             ; --         ;
-; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                             ; --         ;
-; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                             ; --         ;
-; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                             ; --         ;
-; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                             ; --         ;
-; TOP_LEVEL_ENTITY                      ; ghrd_top                                                                 ; soc_system    ; --                             ; --         ;
-; USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ; On                                                                       ; Off           ; --                             ; --         ;
-+---------------------------------------+--------------------------------------------------------------------------+---------------+--------------------------------+------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                ;
++---------------------------------------+--------------------------------------------------------------------------+---------------+---------------------------------+------------+
+; Assignment Name                       ; Value                                                                    ; Default Value ; Entity Name                     ; Section Id ;
++---------------------------------------+--------------------------------------------------------------------------+---------------+---------------------------------+------------+
+; COMPILER_SIGNATURE_ID                 ; 220083049924901.145990626403572                                          ; --            ; --                              ; --         ;
+; ECO_REGENERATE_REPORT                 ; On                                                                       ; Off           ; --                              ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/system.pre.h                   ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_ISW_FILE                          ; soc_system/synthesis/submodules/hps.pre.xml                              ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; HPS_PARTITION                         ; On                                                                       ; --            ; soc_system_hps_0_hps_io_border  ; --         ;
+; MAX_CORE_JUNCTION_TEMP                ; 85                                                                       ; --            ; --                              ; --         ;
+; MIN_CORE_JUNCTION_TEMP                ; 0                                                                        ; --            ; --                              ; --         ;
+; MISC_FILE                             ; AudioConfig/synthesis/../AudioConfig.cmp                                 ; --            ; --                              ; --         ;
+; MISC_FILE                             ; AudioConfig/synthesis/../../AudioConfig.qsys                             ; --            ; --                              ; --         ;
+; MISC_FILE                             ; AudioClk/synthesis/../AudioClk.cmp                                       ; --            ; --                              ; --         ;
+; MISC_FILE                             ; AudioClk/synthesis/../../AudioClk.qsys                                   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; Audio/synthesis/../Audio.cmp                                             ; --            ; --                              ; --         ;
+; MISC_FILE                             ; Audio/synthesis/../../Audio.qsys                                         ; --            ; --                              ; --         ;
+; MISC_FILE                             ; ip/altsource_probe/hps_reset_bb.v                                        ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/../soc_system.cmp                                   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/../../C                                             ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/soc_system_hps_0_hps.svd                            ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/../../soc_system.qsys                               ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/emif.pre.xml                   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sdram_io.pre.h                 ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer.pre.c                ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer.pre.h                ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto.pre.h           ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto_ac_init.pre.c   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_auto_inst_init.pre.c ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/sequencer_defines.pre.h        ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/system.pre.h                   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.c                   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/sequencer/tclrpt.pre.h                   ; --            ; --                              ; --         ;
+; MISC_FILE                             ; soc_system/synthesis/submodules/hps.pre.xml                              ; --            ; --                              ; --         ;
+; PARTITION_COLOR                       ; 16764057                                                                 ; --            ; Altera_Karaoke_DE1_Quartus_15_1 ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL   ; PLACEMENT_AND_ROUTING                                                    ; --            ; Altera_Karaoke_DE1_Quartus_15_1 ; Top        ;
+; PARTITION_NETLIST_TYPE                ; SOURCE                                                                   ; --            ; Altera_Karaoke_DE1_Quartus_15_1 ; Top        ;
+; POWER_BOARD_THERMAL_MODEL             ; None (CONSERVATIVE)                                                      ; --            ; --                              ; --         ;
+; POWER_PRESET_COOLING_SOLUTION         ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                    ; --            ; --                              ; --         ;
+; SLD_FILE                              ; AudioConfig/synthesis/AudioConfig.debuginfo                              ; --            ; --                              ; --         ;
+; SLD_FILE                              ; AudioClk/synthesis/AudioClk.debuginfo                                    ; --            ; --                              ; --         ;
+; SLD_FILE                              ; Audio/synthesis/Audio.debuginfo                                          ; --            ; --                              ; --         ;
+; SLD_FILE                              ; soc_system/synthesis/soc_system.regmap                                   ; --            ; --                              ; --         ;
+; SLD_FILE                              ; soc_system/synthesis/soc_system.debuginfo                                ; --            ; --                              ; --         ;
+; SLD_INFO                              ; QSYS_NAME Audio HAS_SOPCINFO 1 GENERATION_ID 1459054590                  ; --            ; Audio                           ; --         ;
+; SLD_INFO                              ; QSYS_NAME AudioClk HAS_SOPCINFO 1 GENERATION_ID 1459646551               ; --            ; AudioClk                        ; --         ;
+; SLD_INFO                              ; QSYS_NAME AudioConfig HAS_SOPCINFO 1 GENERATION_ID 1456105587            ; --            ; AudioConfig                     ; --         ;
+; SLD_INFO                              ; QSYS_NAME soc_system HAS_SOPCINFO 1 GENERATION_ID 1459704999             ; --            ; --                              ; --         ;
+; SOPCINFO_FILE                         ; AudioConfig/synthesis/../../AudioConfig.sopcinfo                         ; --            ; --                              ; --         ;
+; SOPCINFO_FILE                         ; AudioClk/synthesis/../../AudioClk.sopcinfo                               ; --            ; --                              ; --         ;
+; SOPCINFO_FILE                         ; Audio/synthesis/../../Audio.sopcinfo                                     ; --            ; --                              ; --         ;
+; SOPCINFO_FILE                         ; soc_system/synthesis/../../soc_system.sopcinfo                           ; --            ; --                              ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                              ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                              ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                              ; --         ;
+; SYNTHESIS_ONLY_QIP                    ; On                                                                       ; --            ; --                              ; --         ;
+; TOP_LEVEL_ENTITY                      ; Altera_Karaoke_DE1_Quartus_15_1                                          ; soc_system    ; --                              ; --         ;
+; USE_DLL_FREQUENCY_FOR_DQS_DELAY_CHAIN ; On                                                                       ; Off           ; --                              ; --         ;
++---------------------------------------+--------------------------------------------------------------------------+---------------+---------------------------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -153,11 +153,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:17     ; 1.0                     ; 1354 MB             ; 00:01:53                           ;
-; Fitter                    ; 00:03:02     ; 1.2                     ; 3461 MB             ; 00:06:00                           ;
-; Assembler                 ; 00:00:20     ; 1.0                     ; 967 MB              ; 00:00:20                           ;
-; TimeQuest Timing Analyzer ; 00:00:57     ; 1.4                     ; 1765 MB             ; 00:01:16                           ;
-; Total                     ; 00:05:36     ; --                      ; --                  ; 00:09:29                           ;
+; Analysis & Synthesis      ; 00:02:01     ; 2.3                     ; 1362 MB             ; 00:04:57                           ;
+; Fitter                    ; 00:03:32     ; 1.3                     ; 3441 MB             ; 00:07:45                           ;
+; Assembler                 ; 00:00:21     ; 1.0                     ; 976 MB              ; 00:00:21                           ;
+; TimeQuest Timing Analyzer ; 00:01:01     ; 1.6                     ; 1801 MB             ; 00:01:29                           ;
+; Total                     ; 00:06:55     ; --                      ; --                  ; 00:14:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
