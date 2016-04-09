@@ -78,8 +78,11 @@ module DE1_SoC_QSYS (
 	hps_io_hps_io_gpio_inst_GPIO53,
 	hps_io_hps_io_gpio_inst_GPIO54,
 	hps_io_hps_io_gpio_inst_GPIO61,
+	i2c_data_0_external_connection_export,
+	i2c_end_flag_0_external_connection_export,
 	out_port_from_the_i2c_scl,
 	bidir_port_to_and_from_the_i2c_sda,
+	i2c_start_flag_0_external_connection_export,
 	key_external_connection_export,
 	ledr_external_connection_export,
 	memory_mem_a,
@@ -98,7 +101,6 @@ module DE1_SoC_QSYS (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
-	play_out_0_external_connection_export,
 	pll_0_locked_export,
 	pll_audio_locked_export,
 	zs_addr_from_the_sdram,
@@ -119,10 +121,7 @@ module DE1_SoC_QSYS (
 	in_port_to_the_td_status,
 	uart_external_connection_rxd,
 	uart_external_connection_txd,
-	vol_ctrl_0_external_connection_export,
-	vol_flag_out_0_external_connection_export,
-	vol_flag_rr_in_0_external_connection_export,
-	vol_set_in_0_external_connection_export);	
+	play_out_0_external_connection_export);	
 
 	input		vid_clk_to_the_alt_vip_cti_0;
 	input	[7:0]	vid_data_to_the_alt_vip_cti_0;
@@ -202,8 +201,11 @@ module DE1_SoC_QSYS (
 	inout		hps_io_hps_io_gpio_inst_GPIO53;
 	inout		hps_io_hps_io_gpio_inst_GPIO54;
 	inout		hps_io_hps_io_gpio_inst_GPIO61;
+	output	[23:0]	i2c_data_0_external_connection_export;
+	input		i2c_end_flag_0_external_connection_export;
 	output		out_port_from_the_i2c_scl;
 	inout		bidir_port_to_and_from_the_i2c_sda;
+	output		i2c_start_flag_0_external_connection_export;
 	input	[3:0]	key_external_connection_export;
 	output	[9:0]	ledr_external_connection_export;
 	output	[14:0]	memory_mem_a;
@@ -222,7 +224,6 @@ module DE1_SoC_QSYS (
 	output		memory_mem_odt;
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
-	output		play_out_0_external_connection_export;
 	output		pll_0_locked_export;
 	output		pll_audio_locked_export;
 	output	[12:0]	zs_addr_from_the_sdram;
@@ -243,8 +244,5 @@ module DE1_SoC_QSYS (
 	input	[1:0]	in_port_to_the_td_status;
 	input		uart_external_connection_rxd;
 	output		uart_external_connection_txd;
-	output	[6:0]	vol_ctrl_0_external_connection_export;
-	output		vol_flag_out_0_external_connection_export;
-	input		vol_flag_rr_in_0_external_connection_export;
-	input		vol_set_in_0_external_connection_export;
+	output		play_out_0_external_connection_export;
 endmodule

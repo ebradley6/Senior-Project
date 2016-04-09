@@ -230,13 +230,13 @@ wire         audio_clk;
 wire         audio_reset;
 wire			 CLK_1M;
 wire			 END;
-wire			 KEYON;
+//wire			 KEYON;
 wire	[23:0] AUD_I2C_DATA;
-wire         GO;
-wire  [6:0]  VOL_DATA;
-wire         VOL_FLAG;
-wire         VOL_SET;
-wire         VOL_FLAG_RR;
+wire         START;
+//wire  [6:0]  VOL_DATA;
+//wire         VOL_FLAG;
+//wire         VOL_SET;
+//wire         VOL_FLAG_RR;
 wire         PLAY;
 
 wire  [31:0] INSTRUMENTAL_IN;
@@ -325,10 +325,13 @@ DE1_SoC_QSYS u0 (
 		  .ledr_external_connection_export       (LEDR),
 		  //.key_external_connection_export        (KEY),     //   ledr_external_connection.export
 		  .play_out_0_external_connection_export       (PLAY),  
-		  .vol_ctrl_0_external_connection_export       (VOL_DATA),       //       vol_ctrl_0_external_connection.export
-		  .vol_flag_out_0_external_connection_export   (VOL_FLAG),   //   vol_flag_out_0_external_connection.export
-		  .vol_flag_rr_in_0_external_connection_export (VOL_FLAG_RR), // vol_flag_rr_in_0_external_connection.export
-		  .vol_set_in_0_external_connection_export     (VOL_SET),      //     vol_set_in_0_external_connection.export
+		  //.vol_ctrl_0_external_connection_export       (VOL_DATA),       //       vol_ctrl_0_external_connection.export
+		  //.vol_flag_out_0_external_connection_export   (VOL_FLAG),   //   vol_flag_out_0_external_connection.export
+		  //.vol_flag_rr_in_0_external_connection_export (VOL_FLAG_RR), // vol_flag_rr_in_0_external_connection.export
+		  //.vol_set_in_0_external_connection_export     (VOL_SET),      //     vol_set_in_0_external_connection.export
+		  .i2c_data_0_external_connection_export (AUD_I2C_DATA),
+		  .i2c_end_flag_0_external_connection_export (END),
+		  .i2c_start_flag_0_external_connection_export (START),
         
 		  
 		  //Audio FIFO
@@ -485,7 +488,7 @@ Audio u2 (
 		.to_dac_right_channel_valid   (VALID_R),   //                            .valid
 		.to_dac_right_channel_ready   (READY_R)    //                            .ready
 );
-
+/*
 //I2C output data
 CLOCK_500	 u3(
 					 .CLOCK(CLOCK_50),
@@ -499,9 +502,10 @@ CLOCK_500	 u3(
 					 .VOL_FLAG_RR(VOL_FLAG_RR),
 					 .DATA(AUD_I2C_DATA)
 );
+*/
 					 
 //i2c controller
-i2c			 u4( // Host Side
+i2c			 u3( // Host Side
 					 .CLOCK(CLK_1M),
 					 .RESET(1'b1),
 					  // I2C Side
@@ -509,7 +513,7 @@ i2c			 u4( // Host Side
 					 .I2C_DATA(AUD_I2C_DATA),
 					 .I2C_SCLK(FPGA_I2C_SCLK),
 					  // Control Signals
-					 .GO(GO),
+					 .GO(START),
 					 .END(END)
 );
 	 

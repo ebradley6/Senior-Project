@@ -306,7 +306,7 @@
    {
       datum _sortIndex
       {
-         value = "41";
+         value = "39";
          type = "int";
       }
    }
@@ -324,6 +324,22 @@
       {
          value = "0";
          type = "String";
+      }
+   }
+   element i2c_data_0
+   {
+      datum _sortIndex
+      {
+         value = "36";
+         type = "int";
+      }
+   }
+   element i2c_end_flag_0
+   {
+      datum _sortIndex
+      {
+         value = "37";
+         type = "int";
       }
    }
    element i2c_scl
@@ -376,6 +392,14 @@
       {
          value = "64";
          type = "String";
+      }
+   }
+   element i2c_start_flag_0
+   {
+      datum _sortIndex
+      {
+         value = "38";
+         type = "int";
       }
    }
    element jtag_uart
@@ -507,7 +531,7 @@
    {
       datum _sortIndex
       {
-         value = "39";
+         value = "40";
          type = "int";
       }
    }
@@ -804,38 +828,6 @@
          type = "String";
       }
    }
-   element vol_ctrl_0
-   {
-      datum _sortIndex
-      {
-         value = "36";
-         type = "int";
-      }
-   }
-   element vol_flag_RR_in_0
-   {
-      datum _sortIndex
-      {
-         value = "40";
-         type = "int";
-      }
-   }
-   element vol_flag_out_0
-   {
-      datum _sortIndex
-      {
-         value = "38";
-         type = "int";
-      }
-   }
-   element vol_set_in_0
-   {
-      datum _sortIndex
-      {
-         value = "37";
-         type = "int";
-      }
-   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -897,6 +889,16 @@
    dir="start" />
  <interface name="hps_io" internal="hps_0.hps_io" type="conduit" dir="end" />
  <interface
+   name="i2c_data_0_external_connection"
+   internal="i2c_data_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="i2c_end_flag_0_external_connection"
+   internal="i2c_end_flag_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="i2c_scl_external_connection"
    internal="i2c_scl.external_connection"
    type="conduit"
@@ -910,6 +912,11 @@
    dir="end">
   <port name="bidir_port_to_and_from_the_i2c_sda" internal="bidir_port" />
  </interface>
+ <interface
+   name="i2c_start_flag_0_external_connection"
+   internal="i2c_start_flag_0.external_connection"
+   type="conduit"
+   dir="end" />
  <interface
    name="key_external_connection"
    internal="key.external_connection"
@@ -974,26 +981,6 @@
  <interface
    name="uart_external_connection"
    internal="uart.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="vol_ctrl_0_external_connection"
-   internal="vol_ctrl_0.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="vol_flag_out_0_external_connection"
-   internal="vol_flag_out_0.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="vol_flag_rr_in_0_external_connection"
-   internal="vol_flag_RR_in_0.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="vol_set_in_0_external_connection"
-   internal="vol_set_in_0.external_connection"
    type="conduit"
    dir="end" />
  <module
@@ -1880,6 +1867,38 @@
   <parameter name="usb_mp_clk_div" value="0" />
   <parameter name="use_default_mpu_clk" value="true" />
  </module>
+ <module name="i2c_data_0" kind="altera_avalon_pio" version="15.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="24" />
+ </module>
+ <module
+   name="i2c_end_flag_0"
+   kind="altera_avalon_pio"
+   version="15.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
  <module name="i2c_scl" kind="altera_avalon_pio" version="15.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -1900,6 +1919,24 @@
   <parameter name="captureEdge" value="false" />
   <parameter name="clockRate" value="10000000" />
   <parameter name="direction" value="Bidir" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module
+   name="i2c_start_flag_0"
+   kind="altera_avalon_pio"
+   version="15.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
   <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="false" />
   <parameter name="irqType" value="LEVEL" />
@@ -2575,74 +2612,6 @@
   <parameter name="useEopRegister" value="false" />
   <parameter name="useRelativePathForSimFile" value="false" />
  </module>
- <module name="vol_ctrl_0" kind="altera_avalon_pio" version="15.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="121" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="7" />
- </module>
- <module
-   name="vol_flag_RR_in_0"
-   kind="altera_avalon_pio"
-   version="15.1"
-   enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
- </module>
- <module
-   name="vol_flag_out_0"
-   kind="altera_avalon_pio"
-   version="15.1"
-   enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Output" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
- </module>
- <module
-   name="vol_set_in_0"
-   kind="altera_avalon_pio"
-   version="15.1"
-   enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="50000000" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
- </module>
  <connection
    kind="avalon"
    version="15.1"
@@ -2814,7 +2783,7 @@
    kind="avalon"
    version="15.1"
    start="hps_0.h2f_lw_axi_master"
-   end="vol_ctrl_0.s1">
+   end="i2c_data_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00050000" />
   <parameter name="defaultConnection" value="false" />
@@ -2823,7 +2792,7 @@
    kind="avalon"
    version="15.1"
    start="hps_0.h2f_lw_axi_master"
-   end="vol_set_in_0.s1">
+   end="i2c_end_flag_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
@@ -2832,7 +2801,7 @@
    kind="avalon"
    version="15.1"
    start="hps_0.h2f_lw_axi_master"
-   end="vol_flag_out_0.s1">
+   end="i2c_start_flag_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00012000" />
   <parameter name="defaultConnection" value="false" />
@@ -2844,15 +2813,6 @@
    end="play_out_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00013000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="15.1"
-   start="hps_0.h2f_lw_axi_master"
-   end="vol_flag_RR_in_0.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00014000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -3015,19 +2975,18 @@
    start="alt_vip_cpr_2.dout0"
    end="alt_vip_mix_0.din_1" />
  <connection kind="clock" version="15.1" start="clk_50.clk" end="timer_0.clk" />
- <connection kind="clock" version="15.1" start="clk_50.clk" end="vol_ctrl_0.clk" />
- <connection kind="clock" version="15.1" start="clk_50.clk" end="vol_set_in_0.clk" />
+ <connection kind="clock" version="15.1" start="clk_50.clk" end="i2c_data_0.clk" />
  <connection
    kind="clock"
    version="15.1"
    start="clk_50.clk"
-   end="vol_flag_out_0.clk" />
+   end="i2c_end_flag_0.clk" />
+ <connection
+   kind="clock"
+   version="15.1"
+   start="clk_50.clk"
+   end="i2c_start_flag_0.clk" />
  <connection kind="clock" version="15.1" start="clk_50.clk" end="play_out_0.clk" />
- <connection
-   kind="clock"
-   version="15.1"
-   start="clk_50.clk"
-   end="vol_flag_RR_in_0.clk" />
  <connection kind="clock" version="15.1" start="clk_50.clk" end="fifo_0.clk_in" />
  <connection
    kind="clock"
@@ -3356,27 +3315,22 @@
    kind="reset"
    version="15.1"
    start="clk_50.clk_reset"
-   end="vol_ctrl_0.reset" />
+   end="i2c_data_0.reset" />
  <connection
    kind="reset"
    version="15.1"
    start="clk_50.clk_reset"
-   end="vol_set_in_0.reset" />
+   end="i2c_end_flag_0.reset" />
  <connection
    kind="reset"
    version="15.1"
    start="clk_50.clk_reset"
-   end="vol_flag_out_0.reset" />
+   end="i2c_start_flag_0.reset" />
  <connection
    kind="reset"
    version="15.1"
    start="clk_50.clk_reset"
    end="play_out_0.reset" />
- <connection
-   kind="reset"
-   version="15.1"
-   start="clk_50.clk_reset"
-   end="vol_flag_RR_in_0.reset" />
  <connection
    kind="reset"
    version="15.1"

@@ -78,8 +78,11 @@
 			hps_io_hps_io_gpio_inst_GPIO53              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO53
 			hps_io_hps_io_gpio_inst_GPIO54              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO54
 			hps_io_hps_io_gpio_inst_GPIO61              : inout std_logic                     := 'X';             -- hps_io_gpio_inst_GPIO61
+			i2c_data_0_external_connection_export       : out   std_logic_vector(23 downto 0);                    -- export
+			i2c_end_flag_0_external_connection_export   : in    std_logic                     := 'X';             -- export
 			out_port_from_the_i2c_scl                   : out   std_logic;                                        -- export
 			bidir_port_to_and_from_the_i2c_sda          : inout std_logic                     := 'X';             -- export
+			i2c_start_flag_0_external_connection_export : out   std_logic;                                        -- export
 			key_external_connection_export              : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			ledr_external_connection_export             : out   std_logic_vector(9 downto 0);                     -- export
 			memory_mem_a                                : out   std_logic_vector(14 downto 0);                    -- mem_a
@@ -98,7 +101,6 @@
 			memory_mem_odt                              : out   std_logic;                                        -- mem_odt
 			memory_mem_dm                               : out   std_logic_vector(3 downto 0);                     -- mem_dm
 			memory_oct_rzqin                            : in    std_logic                     := 'X';             -- oct_rzqin
-			play_out_0_external_connection_export       : out   std_logic;                                        -- export
 			pll_0_locked_export                         : out   std_logic;                                        -- export
 			pll_audio_locked_export                     : out   std_logic;                                        -- export
 			zs_addr_from_the_sdram                      : out   std_logic_vector(12 downto 0);                    -- addr
@@ -119,10 +121,7 @@
 			in_port_to_the_td_status                    : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
 			uart_external_connection_rxd                : in    std_logic                     := 'X';             -- rxd
 			uart_external_connection_txd                : out   std_logic;                                        -- txd
-			vol_ctrl_0_external_connection_export       : out   std_logic_vector(6 downto 0);                     -- export
-			vol_flag_out_0_external_connection_export   : out   std_logic;                                        -- export
-			vol_flag_rr_in_0_external_connection_export : in    std_logic                     := 'X';             -- export
-			vol_set_in_0_external_connection_export     : in    std_logic                     := 'X'              -- export
+			play_out_0_external_connection_export       : out   std_logic                                         -- export
 		);
 	end component DE1_SoC_QSYS;
 
@@ -206,8 +205,11 @@
 			hps_io_hps_io_gpio_inst_GPIO53              => CONNECTED_TO_hps_io_hps_io_gpio_inst_GPIO53,              --                                     .hps_io_gpio_inst_GPIO53
 			hps_io_hps_io_gpio_inst_GPIO54              => CONNECTED_TO_hps_io_hps_io_gpio_inst_GPIO54,              --                                     .hps_io_gpio_inst_GPIO54
 			hps_io_hps_io_gpio_inst_GPIO61              => CONNECTED_TO_hps_io_hps_io_gpio_inst_GPIO61,              --                                     .hps_io_gpio_inst_GPIO61
+			i2c_data_0_external_connection_export       => CONNECTED_TO_i2c_data_0_external_connection_export,       --       i2c_data_0_external_connection.export
+			i2c_end_flag_0_external_connection_export   => CONNECTED_TO_i2c_end_flag_0_external_connection_export,   --   i2c_end_flag_0_external_connection.export
 			out_port_from_the_i2c_scl                   => CONNECTED_TO_out_port_from_the_i2c_scl,                   --          i2c_scl_external_connection.export
 			bidir_port_to_and_from_the_i2c_sda          => CONNECTED_TO_bidir_port_to_and_from_the_i2c_sda,          --          i2c_sda_external_connection.export
+			i2c_start_flag_0_external_connection_export => CONNECTED_TO_i2c_start_flag_0_external_connection_export, -- i2c_start_flag_0_external_connection.export
 			key_external_connection_export              => CONNECTED_TO_key_external_connection_export,              --              key_external_connection.export
 			ledr_external_connection_export             => CONNECTED_TO_ledr_external_connection_export,             --             ledr_external_connection.export
 			memory_mem_a                                => CONNECTED_TO_memory_mem_a,                                --                               memory.mem_a
@@ -226,7 +228,6 @@
 			memory_mem_odt                              => CONNECTED_TO_memory_mem_odt,                              --                                     .mem_odt
 			memory_mem_dm                               => CONNECTED_TO_memory_mem_dm,                               --                                     .mem_dm
 			memory_oct_rzqin                            => CONNECTED_TO_memory_oct_rzqin,                            --                                     .oct_rzqin
-			play_out_0_external_connection_export       => CONNECTED_TO_play_out_0_external_connection_export,       --       play_out_0_external_connection.export
 			pll_0_locked_export                         => CONNECTED_TO_pll_0_locked_export,                         --                         pll_0_locked.export
 			pll_audio_locked_export                     => CONNECTED_TO_pll_audio_locked_export,                     --                     pll_audio_locked.export
 			zs_addr_from_the_sdram                      => CONNECTED_TO_zs_addr_from_the_sdram,                      --                           sdram_wire.addr
@@ -247,9 +248,6 @@
 			in_port_to_the_td_status                    => CONNECTED_TO_in_port_to_the_td_status,                    --        td_status_external_connection.export
 			uart_external_connection_rxd                => CONNECTED_TO_uart_external_connection_rxd,                --             uart_external_connection.rxd
 			uart_external_connection_txd                => CONNECTED_TO_uart_external_connection_txd,                --                                     .txd
-			vol_ctrl_0_external_connection_export       => CONNECTED_TO_vol_ctrl_0_external_connection_export,       --       vol_ctrl_0_external_connection.export
-			vol_flag_out_0_external_connection_export   => CONNECTED_TO_vol_flag_out_0_external_connection_export,   --   vol_flag_out_0_external_connection.export
-			vol_flag_rr_in_0_external_connection_export => CONNECTED_TO_vol_flag_rr_in_0_external_connection_export, -- vol_flag_rr_in_0_external_connection.export
-			vol_set_in_0_external_connection_export     => CONNECTED_TO_vol_set_in_0_external_connection_export      --     vol_set_in_0_external_connection.export
+			play_out_0_external_connection_export       => CONNECTED_TO_play_out_0_external_connection_export        --       play_out_0_external_connection.export
 		);
 

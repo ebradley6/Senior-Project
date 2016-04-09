@@ -49,7 +49,7 @@ module DE1_SoC_QSYS_sysid (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1458780102 : 0;
+  assign readdata = address ? 1459995357 : 0;
 
 endmodule
 

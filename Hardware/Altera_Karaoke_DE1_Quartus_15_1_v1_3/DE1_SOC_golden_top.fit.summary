@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Mar 24 01:28:37 2016
+Fitter Status : Successful - Wed Apr 06 22:44:41 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : DE1_SOC_golden_top
 Top-level Entity Name : DE1_SOC_golden_top
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 12,927 / 32,070 ( 40 % )
-Total registers : 26619
+Logic utilization (in ALMs) : 12,904 / 32,070 ( 40 % )
+Total registers : 26595
 Total pins : 369 / 457 ( 81 % )
 Total virtual pins : 0
-Total block memory bits : 1,972,352 / 4,065,280 ( 49 % )
+Total block memory bits : 1,970,816 / 4,065,280 ( 48 % )
 Total RAM Blocks : 274 / 397 ( 69 % )
 Total DSP Blocks : 35 / 87 ( 40 % )
 Total HSSI RX PCSs : 0

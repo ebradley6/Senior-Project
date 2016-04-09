@@ -77,8 +77,11 @@
 		.hps_io_hps_io_gpio_inst_GPIO53              (<connected-to-hps_io_hps_io_gpio_inst_GPIO53>),              //                                     .hps_io_gpio_inst_GPIO53
 		.hps_io_hps_io_gpio_inst_GPIO54              (<connected-to-hps_io_hps_io_gpio_inst_GPIO54>),              //                                     .hps_io_gpio_inst_GPIO54
 		.hps_io_hps_io_gpio_inst_GPIO61              (<connected-to-hps_io_hps_io_gpio_inst_GPIO61>),              //                                     .hps_io_gpio_inst_GPIO61
+		.i2c_data_0_external_connection_export       (<connected-to-i2c_data_0_external_connection_export>),       //       i2c_data_0_external_connection.export
+		.i2c_end_flag_0_external_connection_export   (<connected-to-i2c_end_flag_0_external_connection_export>),   //   i2c_end_flag_0_external_connection.export
 		.out_port_from_the_i2c_scl                   (<connected-to-out_port_from_the_i2c_scl>),                   //          i2c_scl_external_connection.export
 		.bidir_port_to_and_from_the_i2c_sda          (<connected-to-bidir_port_to_and_from_the_i2c_sda>),          //          i2c_sda_external_connection.export
+		.i2c_start_flag_0_external_connection_export (<connected-to-i2c_start_flag_0_external_connection_export>), // i2c_start_flag_0_external_connection.export
 		.key_external_connection_export              (<connected-to-key_external_connection_export>),              //              key_external_connection.export
 		.ledr_external_connection_export             (<connected-to-ledr_external_connection_export>),             //             ledr_external_connection.export
 		.memory_mem_a                                (<connected-to-memory_mem_a>),                                //                               memory.mem_a
@@ -97,7 +100,6 @@
 		.memory_mem_odt                              (<connected-to-memory_mem_odt>),                              //                                     .mem_odt
 		.memory_mem_dm                               (<connected-to-memory_mem_dm>),                               //                                     .mem_dm
 		.memory_oct_rzqin                            (<connected-to-memory_oct_rzqin>),                            //                                     .oct_rzqin
-		.play_out_0_external_connection_export       (<connected-to-play_out_0_external_connection_export>),       //       play_out_0_external_connection.export
 		.pll_0_locked_export                         (<connected-to-pll_0_locked_export>),                         //                         pll_0_locked.export
 		.pll_audio_locked_export                     (<connected-to-pll_audio_locked_export>),                     //                     pll_audio_locked.export
 		.zs_addr_from_the_sdram                      (<connected-to-zs_addr_from_the_sdram>),                      //                           sdram_wire.addr
@@ -118,9 +120,6 @@
 		.in_port_to_the_td_status                    (<connected-to-in_port_to_the_td_status>),                    //        td_status_external_connection.export
 		.uart_external_connection_rxd                (<connected-to-uart_external_connection_rxd>),                //             uart_external_connection.rxd
 		.uart_external_connection_txd                (<connected-to-uart_external_connection_txd>),                //                                     .txd
-		.vol_ctrl_0_external_connection_export       (<connected-to-vol_ctrl_0_external_connection_export>),       //       vol_ctrl_0_external_connection.export
-		.vol_flag_out_0_external_connection_export   (<connected-to-vol_flag_out_0_external_connection_export>),   //   vol_flag_out_0_external_connection.export
-		.vol_flag_rr_in_0_external_connection_export (<connected-to-vol_flag_rr_in_0_external_connection_export>), // vol_flag_rr_in_0_external_connection.export
-		.vol_set_in_0_external_connection_export     (<connected-to-vol_set_in_0_external_connection_export>)      //     vol_set_in_0_external_connection.export
+		.play_out_0_external_connection_export       (<connected-to-play_out_0_external_connection_export>)        //       play_out_0_external_connection.export
 	);
 

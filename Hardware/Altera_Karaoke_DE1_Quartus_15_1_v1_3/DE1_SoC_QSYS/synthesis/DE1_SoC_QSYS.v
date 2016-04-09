@@ -82,8 +82,11 @@ module DE1_SoC_QSYS (
 		inout  wire        hps_io_hps_io_gpio_inst_GPIO53,              //                                     .hps_io_gpio_inst_GPIO53
 		inout  wire        hps_io_hps_io_gpio_inst_GPIO54,              //                                     .hps_io_gpio_inst_GPIO54
 		inout  wire        hps_io_hps_io_gpio_inst_GPIO61,              //                                     .hps_io_gpio_inst_GPIO61
+		output wire [23:0] i2c_data_0_external_connection_export,       //       i2c_data_0_external_connection.export
+		input  wire        i2c_end_flag_0_external_connection_export,   //   i2c_end_flag_0_external_connection.export
 		output wire        out_port_from_the_i2c_scl,                   //          i2c_scl_external_connection.export
 		inout  wire        bidir_port_to_and_from_the_i2c_sda,          //          i2c_sda_external_connection.export
+		output wire        i2c_start_flag_0_external_connection_export, // i2c_start_flag_0_external_connection.export
 		input  wire [3:0]  key_external_connection_export,              //              key_external_connection.export
 		output wire [9:0]  ledr_external_connection_export,             //             ledr_external_connection.export
 		output wire [14:0] memory_mem_a,                                //                               memory.mem_a
@@ -122,11 +125,7 @@ module DE1_SoC_QSYS (
 		output wire        out_port_from_the_td_reset_n,                //       td_reset_n_external_connection.export
 		input  wire [1:0]  in_port_to_the_td_status,                    //        td_status_external_connection.export
 		input  wire        uart_external_connection_rxd,                //             uart_external_connection.rxd
-		output wire        uart_external_connection_txd,                //                                     .txd
-		output wire [6:0]  vol_ctrl_0_external_connection_export,       //       vol_ctrl_0_external_connection.export
-		output wire        vol_flag_out_0_external_connection_export,   //   vol_flag_out_0_external_connection.export
-		input  wire        vol_flag_rr_in_0_external_connection_export, // vol_flag_rr_in_0_external_connection.export
-		input  wire        vol_set_in_0_external_connection_export      //     vol_set_in_0_external_connection.export
+		output wire        uart_external_connection_txd                 //                                     .txd
 	);
 
 	wire          alt_vip_vfr_0_avalon_streaming_source_valid;                   // alt_vip_vfr_0:dout_valid -> alt_vip_cpr_1:din0_valid
@@ -385,25 +384,23 @@ module DE1_SoC_QSYS (
 	wire    [2:0] mm_interconnect_1_timer_0_s1_address;                          // mm_interconnect_1:timer_0_s1_address -> timer_0:address
 	wire          mm_interconnect_1_timer_0_s1_write;                            // mm_interconnect_1:timer_0_s1_write -> timer_0:write_n
 	wire   [15:0] mm_interconnect_1_timer_0_s1_writedata;                        // mm_interconnect_1:timer_0_s1_writedata -> timer_0:writedata
-	wire          mm_interconnect_1_vol_ctrl_0_s1_chipselect;                    // mm_interconnect_1:vol_ctrl_0_s1_chipselect -> vol_ctrl_0:chipselect
-	wire   [31:0] mm_interconnect_1_vol_ctrl_0_s1_readdata;                      // vol_ctrl_0:readdata -> mm_interconnect_1:vol_ctrl_0_s1_readdata
-	wire    [1:0] mm_interconnect_1_vol_ctrl_0_s1_address;                       // mm_interconnect_1:vol_ctrl_0_s1_address -> vol_ctrl_0:address
-	wire          mm_interconnect_1_vol_ctrl_0_s1_write;                         // mm_interconnect_1:vol_ctrl_0_s1_write -> vol_ctrl_0:write_n
-	wire   [31:0] mm_interconnect_1_vol_ctrl_0_s1_writedata;                     // mm_interconnect_1:vol_ctrl_0_s1_writedata -> vol_ctrl_0:writedata
-	wire   [31:0] mm_interconnect_1_vol_set_in_0_s1_readdata;                    // vol_set_in_0:readdata -> mm_interconnect_1:vol_set_in_0_s1_readdata
-	wire    [1:0] mm_interconnect_1_vol_set_in_0_s1_address;                     // mm_interconnect_1:vol_set_in_0_s1_address -> vol_set_in_0:address
-	wire          mm_interconnect_1_vol_flag_out_0_s1_chipselect;                // mm_interconnect_1:vol_flag_out_0_s1_chipselect -> vol_flag_out_0:chipselect
-	wire   [31:0] mm_interconnect_1_vol_flag_out_0_s1_readdata;                  // vol_flag_out_0:readdata -> mm_interconnect_1:vol_flag_out_0_s1_readdata
-	wire    [1:0] mm_interconnect_1_vol_flag_out_0_s1_address;                   // mm_interconnect_1:vol_flag_out_0_s1_address -> vol_flag_out_0:address
-	wire          mm_interconnect_1_vol_flag_out_0_s1_write;                     // mm_interconnect_1:vol_flag_out_0_s1_write -> vol_flag_out_0:write_n
-	wire   [31:0] mm_interconnect_1_vol_flag_out_0_s1_writedata;                 // mm_interconnect_1:vol_flag_out_0_s1_writedata -> vol_flag_out_0:writedata
+	wire          mm_interconnect_1_i2c_data_0_s1_chipselect;                    // mm_interconnect_1:i2c_data_0_s1_chipselect -> i2c_data_0:chipselect
+	wire   [31:0] mm_interconnect_1_i2c_data_0_s1_readdata;                      // i2c_data_0:readdata -> mm_interconnect_1:i2c_data_0_s1_readdata
+	wire    [1:0] mm_interconnect_1_i2c_data_0_s1_address;                       // mm_interconnect_1:i2c_data_0_s1_address -> i2c_data_0:address
+	wire          mm_interconnect_1_i2c_data_0_s1_write;                         // mm_interconnect_1:i2c_data_0_s1_write -> i2c_data_0:write_n
+	wire   [31:0] mm_interconnect_1_i2c_data_0_s1_writedata;                     // mm_interconnect_1:i2c_data_0_s1_writedata -> i2c_data_0:writedata
+	wire   [31:0] mm_interconnect_1_i2c_end_flag_0_s1_readdata;                  // i2c_end_flag_0:readdata -> mm_interconnect_1:i2c_end_flag_0_s1_readdata
+	wire    [1:0] mm_interconnect_1_i2c_end_flag_0_s1_address;                   // mm_interconnect_1:i2c_end_flag_0_s1_address -> i2c_end_flag_0:address
+	wire          mm_interconnect_1_i2c_start_flag_0_s1_chipselect;              // mm_interconnect_1:i2c_start_flag_0_s1_chipselect -> i2c_start_flag_0:chipselect
+	wire   [31:0] mm_interconnect_1_i2c_start_flag_0_s1_readdata;                // i2c_start_flag_0:readdata -> mm_interconnect_1:i2c_start_flag_0_s1_readdata
+	wire    [1:0] mm_interconnect_1_i2c_start_flag_0_s1_address;                 // mm_interconnect_1:i2c_start_flag_0_s1_address -> i2c_start_flag_0:address
+	wire          mm_interconnect_1_i2c_start_flag_0_s1_write;                   // mm_interconnect_1:i2c_start_flag_0_s1_write -> i2c_start_flag_0:write_n
+	wire   [31:0] mm_interconnect_1_i2c_start_flag_0_s1_writedata;               // mm_interconnect_1:i2c_start_flag_0_s1_writedata -> i2c_start_flag_0:writedata
 	wire          mm_interconnect_1_play_out_0_s1_chipselect;                    // mm_interconnect_1:play_out_0_s1_chipselect -> play_out_0:chipselect
 	wire   [31:0] mm_interconnect_1_play_out_0_s1_readdata;                      // play_out_0:readdata -> mm_interconnect_1:play_out_0_s1_readdata
 	wire    [1:0] mm_interconnect_1_play_out_0_s1_address;                       // mm_interconnect_1:play_out_0_s1_address -> play_out_0:address
 	wire          mm_interconnect_1_play_out_0_s1_write;                         // mm_interconnect_1:play_out_0_s1_write -> play_out_0:write_n
 	wire   [31:0] mm_interconnect_1_play_out_0_s1_writedata;                     // mm_interconnect_1:play_out_0_s1_writedata -> play_out_0:writedata
-	wire   [31:0] mm_interconnect_1_vol_flag_rr_in_0_s1_readdata;                // vol_flag_RR_in_0:readdata -> mm_interconnect_1:vol_flag_RR_in_0_s1_readdata
-	wire    [1:0] mm_interconnect_1_vol_flag_rr_in_0_s1_address;                 // mm_interconnect_1:vol_flag_RR_in_0_s1_address -> vol_flag_RR_in_0:address
 	wire          clock_crossing_io_slow_m0_waitrequest;                         // mm_interconnect_2:clock_crossing_io_slow_m0_waitrequest -> clock_crossing_io_slow:m0_waitrequest
 	wire   [31:0] clock_crossing_io_slow_m0_readdata;                            // mm_interconnect_2:clock_crossing_io_slow_m0_readdata -> clock_crossing_io_slow:m0_readdata
 	wire          clock_crossing_io_slow_m0_debugaccess;                         // clock_crossing_io_slow:m0_debugaccess -> mm_interconnect_2:clock_crossing_io_slow_m0_debugaccess
@@ -488,7 +485,7 @@ module DE1_SoC_QSYS (
 	wire          rst_controller_reset_out_reset;                                // rst_controller:reset_out -> [alt_vip_cl_scl_0:main_reset, alt_vip_clip_0:reset, alt_vip_cpr_0:reset, alt_vip_cpr_1:reset, alt_vip_cpr_2:reset, alt_vip_crs_0:reset, alt_vip_csc_0:reset, alt_vip_cti_0:rst, alt_vip_dil_0:reset, alt_vip_itc_0:rst, alt_vip_mix_0:reset, alt_vip_vfb_0:reset, alt_vip_vfr_0:master_reset, alt_vip_vfr_0:reset, clock_crossing_io_slow:s0_reset, cpu:reset_n, irq_mapper:reset, irq_synchronizer:sender_reset, irq_synchronizer_001:sender_reset, mm_clock_crossing_bridge_1:s0_reset, mm_interconnect_0:alt_vip_vfr_0_clock_master_reset_reset_bridge_in_reset_reset, mm_interconnect_1:cpu_reset_n_reset_bridge_in_reset_reset, mm_interconnect_4:alt_vip_vfb_0_reset_reset_bridge_in_reset_reset, rst_translator:in_reset, sdram:reset_n, timer_stamp:reset_n, uart:reset_n]
 	wire          rst_controller_reset_out_reset_req;                            // rst_controller:reset_req -> [cpu:reset_req, rst_translator:reset_req_in]
 	wire          rst_controller_001_reset_out_reset;                            // rst_controller_001:reset_out -> [clock_crossing_io_slow:m0_reset, i2c_scl:reset_n, i2c_sda:reset_n, irq_synchronizer:receiver_reset, key:reset_n, ledr:reset_n, mm_interconnect_1:ledr_reset_reset_bridge_in_reset_reset, mm_interconnect_2:clock_crossing_io_slow_m0_reset_reset_bridge_in_reset_reset, sw:reset_n, sysid:reset_n, td_reset_n:reset_n, td_status:reset_n, timer:reset_n]
-	wire          rst_controller_002_reset_out_reset;                            // rst_controller_002:reset_out -> [fifo_0:wrreset_n, mm_interconnect_1:fifo_0_reset_in_reset_bridge_in_reset_reset, play_out_0:reset_n, timer_0:reset_n, vol_ctrl_0:reset_n, vol_flag_RR_in_0:reset_n, vol_flag_out_0:reset_n, vol_set_in_0:reset_n]
+	wire          rst_controller_002_reset_out_reset;                            // rst_controller_002:reset_out -> [fifo_0:wrreset_n, i2c_data_0:reset_n, i2c_end_flag_0:reset_n, i2c_start_flag_0:reset_n, mm_interconnect_1:fifo_0_reset_in_reset_bridge_in_reset_reset, play_out_0:reset_n, timer_0:reset_n]
 	wire          rst_controller_003_reset_out_reset;                            // rst_controller_003:reset_out -> fifo_0:rdreset_n
 	wire          rst_controller_004_reset_out_reset;                            // rst_controller_004:reset_out -> [jtag_uart:rst_n, mm_interconnect_1:jtag_uart_reset_reset_bridge_in_reset_reset, onchip_memory2:reset]
 	wire          rst_controller_004_reset_out_reset_req;                        // rst_controller_004:reset_req -> [onchip_memory2:reset_req, rst_translator_001:reset_req_in]
@@ -1114,6 +1111,25 @@ module DE1_SoC_QSYS (
 		.f2h_irq_p1               (hps_0_f2h_irq1_irq)                             //          f2h_irq1.irq
 	);
 
+	DE1_SoC_QSYS_i2c_data_0 i2c_data_0 (
+		.clk        (clk_50),                                     //                 clk.clk
+		.reset_n    (~rst_controller_002_reset_out_reset),        //               reset.reset_n
+		.address    (mm_interconnect_1_i2c_data_0_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_i2c_data_0_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_i2c_data_0_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_i2c_data_0_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_i2c_data_0_s1_readdata),   //                    .readdata
+		.out_port   (i2c_data_0_external_connection_export)       // external_connection.export
+	);
+
+	DE1_SoC_QSYS_i2c_end_flag_0 i2c_end_flag_0 (
+		.clk      (clk_50),                                       //                 clk.clk
+		.reset_n  (~rst_controller_002_reset_out_reset),          //               reset.reset_n
+		.address  (mm_interconnect_1_i2c_end_flag_0_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_i2c_end_flag_0_s1_readdata), //                    .readdata
+		.in_port  (i2c_end_flag_0_external_connection_export)     // external_connection.export
+	);
+
 	DE1_SoC_QSYS_i2c_scl i2c_scl (
 		.clk        (pll_sys_outclk2_clk),                     //                 clk.clk
 		.reset_n    (~rst_controller_001_reset_out_reset),     //               reset.reset_n
@@ -1134,6 +1150,17 @@ module DE1_SoC_QSYS (
 		.chipselect (mm_interconnect_2_i2c_sda_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_2_i2c_sda_s1_readdata),   //                    .readdata
 		.bidir_port (bidir_port_to_and_from_the_i2c_sda)       // external_connection.export
+	);
+
+	DE1_SoC_QSYS_i2c_start_flag_0 i2c_start_flag_0 (
+		.clk        (clk_50),                                           //                 clk.clk
+		.reset_n    (~rst_controller_002_reset_out_reset),              //               reset.reset_n
+		.address    (mm_interconnect_1_i2c_start_flag_0_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_i2c_start_flag_0_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_i2c_start_flag_0_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_i2c_start_flag_0_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_i2c_start_flag_0_s1_readdata),   //                    .readdata
+		.out_port   (i2c_start_flag_0_external_connection_export)       // external_connection.export
 	);
 
 	DE1_SoC_QSYS_jtag_uart jtag_uart (
@@ -1221,7 +1248,7 @@ module DE1_SoC_QSYS (
 		.reset_req  (rst_controller_004_reset_out_reset_req)          //       .reset_req
 	);
 
-	DE1_SoC_QSYS_play_out_0 play_out_0 (
+	DE1_SoC_QSYS_i2c_start_flag_0 play_out_0 (
 		.clk        (clk_50),                                     //                 clk.clk
 		.reset_n    (~rst_controller_002_reset_out_reset),        //               reset.reset_n
 		.address    (mm_interconnect_1_play_out_0_s1_address),    //                  s1.address
@@ -1377,44 +1404,6 @@ module DE1_SoC_QSYS (
 		.irq           (irq_mapper_receiver2_irq)                 //                 irq.irq
 	);
 
-	DE1_SoC_QSYS_vol_ctrl_0 vol_ctrl_0 (
-		.clk        (clk_50),                                     //                 clk.clk
-		.reset_n    (~rst_controller_002_reset_out_reset),        //               reset.reset_n
-		.address    (mm_interconnect_1_vol_ctrl_0_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_vol_ctrl_0_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_vol_ctrl_0_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_vol_ctrl_0_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_vol_ctrl_0_s1_readdata),   //                    .readdata
-		.out_port   (vol_ctrl_0_external_connection_export)       // external_connection.export
-	);
-
-	DE1_SoC_QSYS_vol_flag_RR_in_0 vol_flag_rr_in_0 (
-		.clk      (clk_50),                                         //                 clk.clk
-		.reset_n  (~rst_controller_002_reset_out_reset),            //               reset.reset_n
-		.address  (mm_interconnect_1_vol_flag_rr_in_0_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_1_vol_flag_rr_in_0_s1_readdata), //                    .readdata
-		.in_port  (vol_flag_rr_in_0_external_connection_export)     // external_connection.export
-	);
-
-	DE1_SoC_QSYS_play_out_0 vol_flag_out_0 (
-		.clk        (clk_50),                                         //                 clk.clk
-		.reset_n    (~rst_controller_002_reset_out_reset),            //               reset.reset_n
-		.address    (mm_interconnect_1_vol_flag_out_0_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_1_vol_flag_out_0_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_1_vol_flag_out_0_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_1_vol_flag_out_0_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_1_vol_flag_out_0_s1_readdata),   //                    .readdata
-		.out_port   (vol_flag_out_0_external_connection_export)       // external_connection.export
-	);
-
-	DE1_SoC_QSYS_vol_flag_RR_in_0 vol_set_in_0 (
-		.clk      (clk_50),                                     //                 clk.clk
-		.reset_n  (~rst_controller_002_reset_out_reset),        //               reset.reset_n
-		.address  (mm_interconnect_1_vol_set_in_0_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_1_vol_set_in_0_s1_readdata), //                    .readdata
-		.in_port  (vol_set_in_0_external_connection_export)     // external_connection.export
-	);
-
 	DE1_SoC_QSYS_mm_interconnect_0 mm_interconnect_0 (
 		.hps_0_f2h_axi_slave_awid                                         (mm_interconnect_0_hps_0_f2h_axi_slave_awid),    //                                        hps_0_f2h_axi_slave.awid
 		.hps_0_f2h_axi_slave_awaddr                                       (mm_interconnect_0_hps_0_f2h_axi_slave_awaddr),  //                                                           .awaddr
@@ -1567,6 +1556,18 @@ module DE1_SoC_QSYS (
 		.fifo_0_in_csr_read                                                  (mm_interconnect_1_fifo_0_in_csr_read),                          //                                                              .read
 		.fifo_0_in_csr_readdata                                              (mm_interconnect_1_fifo_0_in_csr_readdata),                      //                                                              .readdata
 		.fifo_0_in_csr_writedata                                             (mm_interconnect_1_fifo_0_in_csr_writedata),                     //                                                              .writedata
+		.i2c_data_0_s1_address                                               (mm_interconnect_1_i2c_data_0_s1_address),                       //                                                 i2c_data_0_s1.address
+		.i2c_data_0_s1_write                                                 (mm_interconnect_1_i2c_data_0_s1_write),                         //                                                              .write
+		.i2c_data_0_s1_readdata                                              (mm_interconnect_1_i2c_data_0_s1_readdata),                      //                                                              .readdata
+		.i2c_data_0_s1_writedata                                             (mm_interconnect_1_i2c_data_0_s1_writedata),                     //                                                              .writedata
+		.i2c_data_0_s1_chipselect                                            (mm_interconnect_1_i2c_data_0_s1_chipselect),                    //                                                              .chipselect
+		.i2c_end_flag_0_s1_address                                           (mm_interconnect_1_i2c_end_flag_0_s1_address),                   //                                             i2c_end_flag_0_s1.address
+		.i2c_end_flag_0_s1_readdata                                          (mm_interconnect_1_i2c_end_flag_0_s1_readdata),                  //                                                              .readdata
+		.i2c_start_flag_0_s1_address                                         (mm_interconnect_1_i2c_start_flag_0_s1_address),                 //                                           i2c_start_flag_0_s1.address
+		.i2c_start_flag_0_s1_write                                           (mm_interconnect_1_i2c_start_flag_0_s1_write),                   //                                                              .write
+		.i2c_start_flag_0_s1_readdata                                        (mm_interconnect_1_i2c_start_flag_0_s1_readdata),                //                                                              .readdata
+		.i2c_start_flag_0_s1_writedata                                       (mm_interconnect_1_i2c_start_flag_0_s1_writedata),               //                                                              .writedata
+		.i2c_start_flag_0_s1_chipselect                                      (mm_interconnect_1_i2c_start_flag_0_s1_chipselect),              //                                                              .chipselect
 		.jtag_uart_avalon_jtag_slave_address                                 (mm_interconnect_1_jtag_uart_avalon_jtag_slave_address),         //                                   jtag_uart_avalon_jtag_slave.address
 		.jtag_uart_avalon_jtag_slave_write                                   (mm_interconnect_1_jtag_uart_avalon_jtag_slave_write),           //                                                              .write
 		.jtag_uart_avalon_jtag_slave_read                                    (mm_interconnect_1_jtag_uart_avalon_jtag_slave_read),            //                                                              .read
@@ -1627,21 +1628,7 @@ module DE1_SoC_QSYS (
 		.uart_s1_readdata                                                    (mm_interconnect_1_uart_s1_readdata),                            //                                                              .readdata
 		.uart_s1_writedata                                                   (mm_interconnect_1_uart_s1_writedata),                           //                                                              .writedata
 		.uart_s1_begintransfer                                               (mm_interconnect_1_uart_s1_begintransfer),                       //                                                              .begintransfer
-		.uart_s1_chipselect                                                  (mm_interconnect_1_uart_s1_chipselect),                          //                                                              .chipselect
-		.vol_ctrl_0_s1_address                                               (mm_interconnect_1_vol_ctrl_0_s1_address),                       //                                                 vol_ctrl_0_s1.address
-		.vol_ctrl_0_s1_write                                                 (mm_interconnect_1_vol_ctrl_0_s1_write),                         //                                                              .write
-		.vol_ctrl_0_s1_readdata                                              (mm_interconnect_1_vol_ctrl_0_s1_readdata),                      //                                                              .readdata
-		.vol_ctrl_0_s1_writedata                                             (mm_interconnect_1_vol_ctrl_0_s1_writedata),                     //                                                              .writedata
-		.vol_ctrl_0_s1_chipselect                                            (mm_interconnect_1_vol_ctrl_0_s1_chipselect),                    //                                                              .chipselect
-		.vol_flag_out_0_s1_address                                           (mm_interconnect_1_vol_flag_out_0_s1_address),                   //                                             vol_flag_out_0_s1.address
-		.vol_flag_out_0_s1_write                                             (mm_interconnect_1_vol_flag_out_0_s1_write),                     //                                                              .write
-		.vol_flag_out_0_s1_readdata                                          (mm_interconnect_1_vol_flag_out_0_s1_readdata),                  //                                                              .readdata
-		.vol_flag_out_0_s1_writedata                                         (mm_interconnect_1_vol_flag_out_0_s1_writedata),                 //                                                              .writedata
-		.vol_flag_out_0_s1_chipselect                                        (mm_interconnect_1_vol_flag_out_0_s1_chipselect),                //                                                              .chipselect
-		.vol_flag_RR_in_0_s1_address                                         (mm_interconnect_1_vol_flag_rr_in_0_s1_address),                 //                                           vol_flag_RR_in_0_s1.address
-		.vol_flag_RR_in_0_s1_readdata                                        (mm_interconnect_1_vol_flag_rr_in_0_s1_readdata),                //                                                              .readdata
-		.vol_set_in_0_s1_address                                             (mm_interconnect_1_vol_set_in_0_s1_address),                     //                                               vol_set_in_0_s1.address
-		.vol_set_in_0_s1_readdata                                            (mm_interconnect_1_vol_set_in_0_s1_readdata)                     //                                                              .readdata
+		.uart_s1_chipselect                                                  (mm_interconnect_1_uart_s1_chipselect)                           //                                                              .chipselect
 	);
 
 	DE1_SoC_QSYS_mm_interconnect_2 mm_interconnect_2 (
