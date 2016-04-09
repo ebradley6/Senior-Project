@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Mar 07 15:51:33 2016
+Fitter Status : Successful - Tue Mar 29 20:54:21 2016
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : soc_system
 Top-level Entity Name : Altera_Karaoke_DE1_Quartus_15_1
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 3,834 / 32,070 ( 12 % )
-Total registers : 5144
+Logic utilization (in ALMs) : 3,810 / 32,070 ( 12 % )
+Total registers : 5122
 Total pins : 148 / 457 ( 32 % )
 Total virtual pins : 0
 Total block memory bits : 538,624 / 4,065,280 ( 13 % )

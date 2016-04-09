@@ -40,7 +40,7 @@
 //   V1.0 :| Allen Wang         :| 03/24/10  :| Initial Revision
 //   V3.0 :| Young       		  :| 01/05/13  :| version 12.1
 // ============================================================================
-`define rom_size 6'd6
+`define rom_size 6'd9
 
 module CLOCK_500 (
 	              CLOCK,
@@ -126,15 +126,16 @@ always @(posedge END)
 	//	ROM[0] = 16'h1e00;
 		ROM[0] = 16'h0c00;	    			 //power down
 		ROM[1] = 16'h0ec9;	   		    	 //master
-		ROM[2] = 16'h083c;	    			 //sound select
+		ROM[2] = 16'h0815;	    			 //sound select
+		ROM[3] = 16'h0A06;
+		ROM[4] = 16'h1000;					 //mclk
 	
-		ROM[3] = 16'h1000;					 //mclk
-	
-		ROM[4] = 16'h005f;					 //
+		ROM[5] = 16'h0017;					 //
+		ROM[6] = 16'h0217;							 //
 		//ROM[5] = 16'h0217;					 //
 		//ROM[5] = {8'h05,1'b1,volume[6:0]};		 //
-		ROM[5] = {8'h05,1'b1,VOL_IN[6:0]};
-		//ROM[7] = {8'h06,1'b0,volume[6:0]};	     //sound vol
+		ROM[7] = {8'h04,1'b0,VOL_IN[6:0]};
+		ROM[8] = {8'h06,1'b0,VOL_IN[6:0]};	     //sound vol
 	
 		//ROM[4]= 16'h1e00;		             //reset	
 		ROM[`rom_size]= 16'h1201;            //active
