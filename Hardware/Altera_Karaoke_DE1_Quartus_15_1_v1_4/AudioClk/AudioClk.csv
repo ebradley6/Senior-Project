@@ -1,0 +1,22 @@
+# system info AudioClk on 2016.02.07.13:53:39
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1454871039
+#
+#
+# Files generated for AudioClk on 2016.02.07.13:53:39
+files:
+filepath,kind,attributes,module,is_top
+simulation/AudioClk.vhd,VHDL,,AudioClk,true
+simulation/submodules/AudioClk_audio_pll_0.vhd,VHDL,,AudioClk_audio_pll_0,false
+simulation/submodules/AudioClk_audio_pll_0_audio_pll.vho,VHDL,,AudioClk_audio_pll_0_audio_pll,false
+simulation/submodules/altera_up_avalon_reset_from_locked_signal.v,VERILOG,,altera_up_avalon_reset_from_locked_signal,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+AudioClk.audio_pll_0,AudioClk_audio_pll_0
+AudioClk.audio_pll_0.audio_pll,AudioClk_audio_pll_0_audio_pll
+AudioClk.audio_pll_0.reset_from_locked,altera_up_avalon_reset_from_locked_signal

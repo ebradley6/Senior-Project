@@ -1,0 +1,17 @@
+# system info Audio on 2016.02.07.13:33:18
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1454869993
+#
+#
+# Files generated for Audio on 2016.02.07.13:33:18
+files:
+filepath,kind,attributes,module,is_top
+simulation/Audio.vhd,VHDL,,Audio,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+Audio.audio_0,Audio_audio_0
