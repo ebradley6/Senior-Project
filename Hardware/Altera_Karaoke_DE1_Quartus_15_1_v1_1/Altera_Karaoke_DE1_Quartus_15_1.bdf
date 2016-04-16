@@ -3356,3 +3356,8 @@ agreement for further details.
 )
 (junction (pt -272 200))
 (junction (pt 40 200))
+(text "Altera Karaoke Senior Project" (rect 1280 416 1553 432)(font "Arial" (font_size 8)))
+(text "Block Diagram" (rect 1280 448 1402 464)(font "Arial" (font_size 8)))
+(text "Created by: Elisabeth Bradley" (rect 1280 464 1553 480)(font "Arial" (font_size 8)))
+(text "Version v1_1" (rect 1280 432 1393 448)(font "Arial" (font_size 8)))
+(text "Date: 2/27/16" (rect 1280 480 1402 496)(font "Arial" (font_size 8)))

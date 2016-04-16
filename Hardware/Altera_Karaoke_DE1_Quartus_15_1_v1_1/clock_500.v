@@ -40,6 +40,21 @@
 //   V1.0 :| Allen Wang         :| 03/24/10  :| Initial Revision
 //   V3.0 :| Young       		  :| 01/05/13  :| version 12.1
 // ============================================================================
+//
+//
+//
+// ============================================================================
+//
+// Altera Karaoke Project :
+// ============================================================================
+// Edited by:        Elisabeth Bradley
+// Hardware version: v1_1
+// Date:             2/27/16
+// File History:          
+//         v0_2:     Updated configuration values for our project
+//         v1_1:     Changed several register values (disabled bypass, DAC 
+//                   mute, etc)
+// ============================================================================
 `define rom_size 6'd9
 
 module CLOCK_500 (

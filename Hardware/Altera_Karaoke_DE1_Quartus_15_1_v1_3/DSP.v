@@ -1,3 +1,12 @@
+// ============================================================================
+// Created by:       Elisabeth Bradley
+// Hardware version: v1_3
+// Date:             3/19/16
+// File History:          
+//         v1_2:     Created file, basically passes through ready, valid, and 
+//                   data streams from the hps fifo and the audio out L and R
+//                   fifos
+// ============================================================================
 module DSP(
 				valid_in_fifo,
 				ready_out_fifo,
