@@ -1,0 +1,101 @@
+//`include "./add.v"
+
+module Mixer(
+				play_in,
+				valid_in_fifo,
+				ready_out_fifo,
+				valid_out_dacL,
+				valid_out_dacR,
+				audio_clk,
+				ready_in_dacL,
+				ready_in_dacR,
+				//LEDS,
+				fifo_in,
+				dac_outL,
+				dac_outR,
+				valid_in_adc,
+				ready_out_adc,
+				dac_out,
+				adc_in
+				);
+				
+input          play_in;				
+input 	      valid_in_fifo;
+output 		   ready_out_fifo;
+
+input          ready_in_dacL;
+input				ready_in_dacR;
+output 		   valid_out_dacL;
+output 			valid_out_dacR;
+
+input          valid_in_adc;
+output         ready_out_adc;
+
+input          audio_clk;
+
+//output  [9:0]  LEDS;
+
+input   [31:0] fifo_in;
+input   [31:0] adc_in;
+output  [31:0] dac_outL;
+output  [31:0] dac_outR;
+
+output [31:0] dac_out;
+
+reg [31:0] dac_out_signal;
+//reg [32:0] dac_out_signalR;
+
+//reg [9:0]  leds_signal;
+
+reg [31:0] fifo_signal;
+reg [31:0] adc_signal;
+
+reg ready_signal;
+
+reg valid_signalL;
+reg valid_signalR;
+
+wire [31:0]dac_outL=dac_out_signal;//{dac_out[24:0], 7'h0};
+wire [31:0]dac_outR=dac_out_signal;//{dac_out[24:0], 7'h0};
+
+//wire [9:0] LEDS=leds_signal;
+
+wire ready_out_fifo=ready_signal;
+wire ready_out_adc=ready_signal;
+
+wire valid_out_dacL=valid_signalL;
+wire valid_out_dacR=valid_signalR;
+
+always @(negedge audio_clk)
+begin
+	if(play_in==1)
+	begin
+		ready_signal=(ready_in_dacL&ready_in_dacR);
+		valid_signalL=valid_in_fifo;
+		valid_signalR=valid_in_fifo;
+		fifo_signal[31:0] = {8'h0, fifo_in[31:8]};
+		adc_signal[31:0] = {8'h0, adc_in[31:8]};
+		if(valid_in_adc==1)
+		begin
+			dac_out_signal[31:0]={dac_out[24:0], 7'h0};
+		end
+		else
+		begin
+			dac_out_signal[31:0]=fifo_signal[31:0];
+		end
+	end
+	else
+	begin
+		ready_signal=1'b0;
+		valid_signalL=1'b0;
+		valid_signalR=1'b0;
+	end
+end
+
+add add_inst(
+	.dataa (fifo_signal),
+	.datab (adc_signal),
+	.result (dac_out)
+);
+
+endmodule
