@@ -12,6 +12,7 @@
 #include<QTextStream>
 
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <fstream>
 #include <string>
@@ -30,18 +31,24 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     void changeLyric(QString linein);
+    int getVolume();
+    int getPlay();
+    string getSong();
     ~MainWindow();
 
 
 private slots:
     void on_pushButton_2_clicked();
-void on_pushButton_1_clicked();
+    void on_pushButton_1_clicked();
     void on_listWidget_itemClicked(QListWidgetItem *item);
 
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
-    void readfile();
 
 };
 

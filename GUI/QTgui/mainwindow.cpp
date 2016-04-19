@@ -2,6 +2,10 @@
 #include "ui_mainwindow.h"
 
 QString currentSong;
+int volume=0;//starts with no audio changes needed
+int play=1;//starts not playing
+string song="Frozen";
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,69 +22,57 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_1_clicked()
 {
-    ui->lineEdit->setText(currentSong);
-
-    //ui->lineEdit->setText(QString::fromStdString(line));
+    play=0;
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
-      readfile();
+      play=1;
 }
 
 void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 {
-  string froz="Frozen";
-  if(froz==(item->text().toStdString())){
-  currentSong=item->text();
-  }else{
-      string notFroze = "not frozen";
-      currentSong=QString::fromStdString(notFroze);
-      ui->lineEdit->setText(currentSong);
+    //used for getting the song selection
 
-}
+  if("Frozen"==(item->text().toStdString()))
+    song="Frozen";
+  else if("Don't Stop Believin'"==(item->text().toStdString()))
+    song = "Journey";
+  else
+    song="Frozen";
+
 }
 
 
 void MainWindow::changeLyric(QString linein){
     ui->lineEdit->setText(linein);
+    ui->lineEdit->repaint();
+    qApp->processEvents();
 }
 
-void MainWindow::readfile(){
-    QString filename="/home/jason/my_Karaoke/Karaoke/Frozen.lrc";
-    QFile file(filename);
-    if(!file.exists()){
-        qDebug() << "NO existe el archivo "<<filename;
-    }else{
-        qDebug() << filename<<" encontrado...";
-    }
-    QString line;
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QTextStream stream(&file);
-        while (!stream.atEnd()){
-            double oldtime=0;
-                double wait=0;
-                double newtime=0;
-             //qDebug() << filename<<" encontrado...";
-            line = stream.readLine();
-            string line1=line.toStdString();
-            int ia = line1[1] - '0';
-                    int ib = line1[3] - '0';
-                    int ic = line1[4] - '0';
-                    int id = line1[6] - '0';
-                    int ie = line1[7] - '0';
-                     newtime = 60*ia+10*ib+ic+0.1*id+.01*ie;
 
-                     wait=1000*(newtime-oldtime);
-                             if(ia>=0&&ia<10){
-                                 usleep(newtime-oldtime);
-                                 usleep(wait);
-                             oldtime=newtime;
-                             }
-            changeLyric(line);
-            qDebug() << "linea: "<<line;
-        }
-    }
-    file.close();
+void MainWindow::on_pushButton_3_clicked()//volume minus
+{
+    volume=-1;
+}
+
+void MainWindow::on_pushButton_4_clicked()//volume plus
+{
+    volume=1;
+}
+
+int MainWindow::getPlay()
+{
+    return play;
+}
+
+int MainWindow::getVolume()
+{
+    return volume;
+}
+
+string MainWindow::getSong(){
+
+    return song;
 }
