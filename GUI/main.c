@@ -13,14 +13,11 @@
 #define HW_REGS_BASE ( ALT_STM_OFST )
 #define HW_REGS_SPAN ( 0x04000000 )
 #define HW_REGS_MASK ( HW_REGS_SPAN - 1 )
-void *h2p_lw_led_addr;
+
 void *h2p_lw_timer_addr;
-
-void *h2p_lw_vol_set_in_addr;
-void *h2p_lw_vol_flag_out_addr;
-void *h2p_lw_vol_ctrl_addr;
-void *h2p_lw_vol_flag_rr_in_addr;
-
+void *h2p_lw_I2C_DATA_addr;
+void *h2p_I2C_START_FLAG_addr;
+void *h2p_I2C_END_FLAG_addr;
 
 int main() {
 
@@ -47,9 +44,14 @@ int main() {
 		return( 1 );
 	}
 
-	h2p_lw_led_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + LED_PIO_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	//h2p_lw_led_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + LED_PIO_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
 
 	h2p_lw_timer_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + TIMER_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	h2p_lw_I2C_DATA_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + I2C_DATA_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	h2p_I2C_START_FLAG_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + I2C_START_FLAG_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+	h2p_I2C_END_FLAG_addr=virtual_base + ( ( unsigned long  )( ALT_LWFPGASLVS_OFST + I2C_END_FLAG_0_BASE ) & ( unsigned long)( HW_REGS_MASK ) );
+
+
 
 	int start_val_low;
 	int start_val_high;
@@ -61,7 +63,7 @@ int main() {
 	start_val_high = *(uint16_t *)(h2p_lw_timer_addr+0xC);
 
 	start = start_val_low + (start_val_high<<16);
-
+	increaseVolume();
 	printf("Initial counter start reg value is %x\r\n", start);
 
 	*(uint16_t *)(h2p_lw_timer_addr+0x8)=0x5E00;
