@@ -138,7 +138,7 @@ int main(int argc, char *argv[]) {
                     status=isFinished();
                     if((status||newtime==0)&&(getline(myfile, line))){
                         count++;
-                        //printf("%c %c %c %c %c %c %c %c\n",line[0],line[1],line[2],line[3],line[4],line[5],line[6],line[7]);
+                        printf("0%c 1%c 2%c 3%c 4%c 5%c 6%c 7%c\n",line[0],line[1],line[2],line[3],line[4],line[5],line[6],line[7]);
                         ia = line[1] - '0';
                         ib = line[3] - '0';
                         ic = line[4] - '0';
@@ -194,7 +194,7 @@ int main(int argc, char *argv[]) {
         //checkplaystatus
         playStatus=w.getPlay();
 
-        //songname=w.getSong();
+        songname=w.getSong();
         //checksong
 
 

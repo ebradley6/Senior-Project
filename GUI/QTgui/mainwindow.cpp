@@ -4,7 +4,7 @@
 QString currentSong;
 int volume=0;//starts with no audio changes needed
 int play=0;//starts not playing
-string song="All Star";
+string song="Journey";
 
 
 MainWindow::MainWindow(QWidget *parent) :
