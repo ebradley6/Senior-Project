@@ -32,6 +32,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void changeLyric(QString linein);
     int getVolume();
+    void getVolume(int a);
+ void setVolume(int a);
+ void process();
     int getPlay();
     string getSong();
     ~MainWindow();

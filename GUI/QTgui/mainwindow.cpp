@@ -3,8 +3,8 @@
 
 QString currentSong;
 int volume=0;//starts with no audio changes needed
-int play=1;//starts not playing
-string song="Frozen";
+int play=0;//starts not playing
+string song="All Star";
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -35,12 +35,17 @@ void MainWindow::on_listWidget_itemClicked(QListWidgetItem *item)
 {
     //used for getting the song selection
 
-  if("Frozen"==(item->text().toStdString()))
-    song="Frozen";
+  if("Hey, Soul Sister"==(item->text().toStdString()))
+    song="soulsister";
   else if("Don't Stop Believin'"==(item->text().toStdString()))
     song = "Journey";
+  else if("All Star"==(item->text().toStdString()))
+    song = "AllStar";
+  else if("Rolling in the Deep"==(item->text().toStdString()))
+    song = "rolling";
   else
-    song="Frozen";
+    song = "Journey";
+  qApp->processEvents();
 
 }
 
@@ -65,14 +70,27 @@ void MainWindow::on_pushButton_4_clicked()//volume plus
 int MainWindow::getPlay()
 {
     return play;
+    //qApp->processEvents();
 }
 
 int MainWindow::getVolume()
-{
+{   qApp->processEvents();
     return volume;
+
 }
 
-string MainWindow::getSong(){
+void MainWindow::setVolume(int a)
+{
+    volume=a;
+}
 
+
+string MainWindow::getSong(){
+     qApp->processEvents();
     return song;
+}
+
+void MainWindow::process()
+{
+   qApp->processEvents();
 }
