@@ -16,36 +16,25 @@
 
 int autotune_flag;
 
-void autotune(uint32_t* ain_arr, uint32_t* aout_arr)
+void autotune(signed long int* ain_arr, signed long int* aout_arr, signed long int* previous)
 {
-	uint32_t overlap = 4;
-	uint32_t sampLen = 256;
-	uint32_t winSize = 8;
-	uint32_t numSec = sampLen/winSize;
-	uint32_t shiftVal = winSize/overlap;
-
-	uint32_t start;
-
-	uint32_t subsect[winSize];
+	uint32_t winSize = 4;
 
 	if(autotune_flag==1)
 	{
-		uint32_t n,l;
-		for(n=1; n<(numSec+1); n++)
+		int j;
+		aout_arr[0]=ain_arr[0]+previous[3];
+		previous[0]=ain_arr[0];
+		for(j=1; j<winSize; j++)
 		{
-			start = n*(winSize+shiftVal)+(1-winSize-shiftVal);
-			for(l=0; l<winSize; l++)
-			{
-				subsect[l]=ain_arr[start+l];
-				aout_arr[start+l]=subsect[l];
-				aout_arr[start+shiftVal+l]+=subsect[l];
-			}
+			aout_arr[j]=ain_arr[j]+ain_arr[j-1];
+			previous[j]=ain_arr[j];
 		}
 	}
 	else
 	{
-		uint32_t k;
-		for(k=1; k<(sampLen+1); k++)
+		int k;
+		for(k=0; k<4; k++)
 		{
 			aout_arr[k]=ain_arr[k];
 		}
@@ -166,6 +155,7 @@ int main() {
 
 	int outdFD;
 	int outhFD;
+	/*
 	if( ( outdFD = open( "/mnt/Ain_bad.txt",  O_RDWR | O_APPEND )) == -1 ) {
 		printf( "ERROR: could not create text file\n" );
 		return( 1 );
@@ -175,6 +165,7 @@ int main() {
 		printf( "ERROR: could not create text file\n" );
 		return( 1 );
 	}
+	*/
 
 	char * OutStrd;
 	char * OutStrh;
@@ -182,7 +173,7 @@ int main() {
 	OutStrd=(char *)malloc(sizeof(char)*20);
 	OutStrh=(char *)malloc(sizeof(char)*20);
 
-	//sprintf(testStr,"#StopHurtingTakumi2k16\r\n");
+	//sprintf(testStr,"#SlaineDidNothingWrong\r\n");
 
 	//write(outFD, testStr, 25);
 
@@ -257,33 +248,41 @@ int main() {
 	uint32_t in_size;
 	uint32_t out_size;
 
-	signed long int * input_aud; //just because for now I don't want to reindex Ikenna's
-							//MATLAB code; Jason, for some reason, I'm writing in c, for c++ use new uint32_t array
+	signed long int * input_aud;
 	signed long int * shifted_aud;
+	signed long int * previous;
 
 	//input_aud = new uint32_t[257];
 	//shifted_aud = new uint32_t[321];
 
-	input_aud = (signed long int *)malloc(sizeof(signed long int)*257);
-	shifted_aud = (signed long int *)malloc(sizeof(signed long int)*321);
+	input_aud = (signed long int *)malloc(sizeof(signed long int)*4);//(signed long int *)malloc(sizeof(signed long int)*4);
+	shifted_aud = (signed long int *)malloc(sizeof(signed long int)*4);//(signed long int *)malloc(sizeof(signed long int)*4);
+	previous = (signed long int *)malloc(sizeof(signed long int)*4);//(signed long int *)malloc(sizeof(signed long int)*4);
 
-	autotune_flag = 0;
+	int j;
 
-	if(autotune_flag==1)
+	for(j=0; j<4; j++)
 	{
-		in_size = 257;
-		out_size = 321;
+		previous[j]=0;
 	}
-	else
-	{
+
+	autotune_flag = 1;
+
+	//if(autotune_flag==1)
+	//{
+	//	in_size = 257;
+	//	out_size = 321;
+	//}
+	//else
+	//{
 		//in_size = 257;
 		//out_size = 257;
-		in_size = 33;
-		out_size = 33;
-	}
+		in_size = 4;
+		out_size = 4;
+	//}
 
-	uint32_t in_cnt=1;
-	uint32_t out_cnt=1;
+	uint32_t in_cnt=0;
+	uint32_t out_cnt=0;
 
 	while(isData==0)
 	{
@@ -314,7 +313,7 @@ int main() {
 
 	while(iseof>0)
 	{
-		/*
+/*
 		isEmpty=((*(uint32_t *)(h2p_lw_fifo_ain_status_addr+0x4))&0x2)>>1;
 		isFull_aout=(*(uint32_t *)(h2p_lw_fifo_aout_status_addr+0x4))&0x1;
 		if((isEmpty!=1)&(isFull_aout!=1))
@@ -322,7 +321,7 @@ int main() {
 			temph=*(uint32_t *)h2p_lw_fifo_ain_addr;
 			*(uint32_t *)h2p_lw_fifo_aout_addr=temph;
 		}
-		 */
+*/
 
 		if(ain_done==0)
 		{
@@ -342,7 +341,7 @@ int main() {
 				in_cnt++;
 				if(in_cnt==in_size)
 				{
-					in_cnt=1;
+					in_cnt=0;
 					ain_done=1;
 					//First=0;
 				}
@@ -359,16 +358,17 @@ int main() {
 				out_cnt++;
 				if(out_cnt==out_size)
 				{
-					out_cnt=1;
+					out_cnt=0;
 					aout_done=1;
 				}
 			}
 		}
 
-
 		if((ain_done==1)&(aout_done==1))
 		{
-			autotune(input_aud, shifted_aud);
+			autotune(input_aud, shifted_aud, previous);
+			//autotune(input_aud, shifted_aud);
+			//printf("input 1 %ld, input 2 %ld, output 2 %ld\r\n", input_aud[1], input_aud[2], shifted_aud[2]);
 			ain_done=0;
 			aout_done=0;
 		}
@@ -394,9 +394,9 @@ int main() {
 					{
 						templ=(templ|0x0000FFFF);
 					}
-					//*(uint32_t *)h2p_lw_fifo_wav_addr=templ;
+					*(uint32_t *)h2p_lw_fifo_wav_addr=templ;
 					//*(uint32_t *)h2p_lw_fifo_aout_addr=0;
-					*(uint32_t *)h2p_lw_fifo_wav_addr=0;
+					//*(uint32_t *)h2p_lw_fifo_wav_addr=0;
 				}
 			}
 		}
@@ -409,9 +409,9 @@ int main() {
 
 	close(wav);
 
-	close(outdFD);
+	//close(outdFD);
 
-	close(outhFD);
+	//close(outhFD);
 
 	printf("Ending program for now! :)\r\n");
 
@@ -426,10 +426,11 @@ int main() {
 	free(wav_buf);
 	//delete [] input_aud;
 	//delete [] shifted_aud;
-	free(OutStrd);
-	free(OutStrh);
+	//free(OutStrd);
+	//free(OutStrh);
 	free(input_aud);
 	free(shifted_aud);
+	free(previous);
 	close( fd );
 
 	return( 0 );
