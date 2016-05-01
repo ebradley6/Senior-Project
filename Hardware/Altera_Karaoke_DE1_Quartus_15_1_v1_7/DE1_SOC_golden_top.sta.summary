@@ -1,0 +1,776 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.726
+TNS   : -444.960
+
+Type  : Slow 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.711
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.730
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.970
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.013
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'clock_50_0'
+Slack : 8.404
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 11.257
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 19.669
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'clock_27_0'
+Slack : 28.808
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.109
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.314
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_27_0'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_50_0'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'clock_27_0'
+Slack : -6.926
+TNS   : -13.841
+
+Type  : Slow 1100mV 85C Model Recovery 'clock_50_0'
+Slack : -6.868
+TNS   : -1545.074
+
+Type  : Slow 1100mV 85C Model Recovery 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -5.209
+TNS   : -1266.664
+
+Type  : Slow 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.800
+TNS   : -276.834
+
+Type  : Slow 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -0.194
+TNS   : -0.548
+
+Type  : Slow 1100mV 85C Model Recovery 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 14.882
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.323
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 94.697
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.537
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'clock_27_0'
+Slack : 0.563
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'clock_50_0'
+Slack : 0.807
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.854
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.888
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.903
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.608
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.623
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.961
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.602
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.456
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_50_0'
+Slack : 8.855
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 11.260
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.459
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_27_0'
+Slack : 17.420
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 25.894
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.770
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.466
+TNS   : -418.222
+
+Type  : Slow 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.973
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.103
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 8.065
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clock_50_0'
+Slack : 8.490
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 11.330
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 19.691
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clock_27_0'
+Slack : 28.880
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.026
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.290
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_27_0'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_50_0'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'clock_27_0'
+Slack : -6.644
+TNS   : -13.267
+
+Type  : Slow 1100mV 0C Model Recovery 'clock_50_0'
+Slack : -6.618
+TNS   : -1485.833
+
+Type  : Slow 1100mV 0C Model Recovery 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -4.855
+TNS   : -1184.585
+
+Type  : Slow 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.820
+TNS   : -95.027
+
+Type  : Slow 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.042
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.468
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 14.941
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 22.424
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 94.984
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'clock_27_0'
+Slack : 0.518
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.672
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'clock_50_0'
+Slack : 0.748
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.824
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.863
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.630
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.961
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.578
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.434
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_50_0'
+Slack : 8.834
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 11.239
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.451
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_27_0'
+Slack : 17.456
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 25.876
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.760
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.317
+TNS   : -312.257
+
+Type  : Fast 1100mV 85C Model Setup 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.064
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.292
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 10.788
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clock_50_0'
+Slack : 12.715
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 13.718
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 21.630
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clock_27_0'
+Slack : 32.098
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_50_0'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_27_0'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'clock_50_0'
+Slack : -4.178
+TNS   : -890.521
+
+Type  : Fast 1100mV 85C Model Recovery 'clock_27_0'
+Slack : -3.869
+TNS   : -7.733
+
+Type  : Fast 1100mV 85C Model Recovery 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -3.417
+TNS   : -832.047
+
+Type  : Fast 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.320
+TNS   : -4.639
+
+Type  : Fast 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.097
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.727
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 15.960
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 23.231
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 96.438
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.247
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'clock_27_0'
+Slack : 0.304
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'clock_50_0'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.505
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.961
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.723
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.574
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_50_0'
+Slack : 8.508
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 11.382
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.361
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_27_0'
+Slack : 17.005
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.013
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.866
+TNS   : -267.199
+
+Type  : Fast 1100mV 0C Model Setup 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.667
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.539
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 11.256
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock_50_0'
+Slack : 13.397
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 14.098
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 21.913
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock_27_0'
+Slack : 32.529
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.034
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_27_0'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_50_0'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clock_50_0'
+Slack : -3.821
+TNS   : -828.711
+
+Type  : Fast 1100mV 0C Model Recovery 'clock_27_0'
+Slack : -3.624
+TNS   : -7.243
+
+Type  : Fast 1100mV 0C Model Recovery 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.943
+TNS   : -713.744
+
+Type  : Fast 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : -2.273
+TNS   : -4.545
+
+Type  : Fast 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.343
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.825
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 16.132
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 23.429
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 96.892
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.233
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'clock_27_0'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'clock_50_0'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DE1_SoC_QSYS:u0|DE1_SoC_QSYS_hps_0:hps_0|DE1_SoC_QSYS_hps_0_hps_io:hps_io|DE1_SoC_QSYS_hps_0_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.894
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 0.961
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.725
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[3].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.577
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_50_0'
+Slack : 8.464
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[4].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 11.383
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.366
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_27_0'
+Slack : 16.957
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u1|audio_pll_0|audio_pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 26.013
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'u0|pll_sys|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 48.886
+TNS   : 0.000
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------

@@ -14,6 +14,7 @@
 			alt_vip_itc_0_clocked_video_vid_f           : out   std_logic;                                        -- vid_f
 			alt_vip_itc_0_clocked_video_vid_h           : out   std_logic;                                        -- vid_h
 			alt_vip_itc_0_clocked_video_vid_v           : out   std_logic;                                        -- vid_v
+			clk_clk                                     : in    std_logic                     := 'X';             -- clk
 			clk_50                                      : in    std_logic                     := 'X';             -- clk
 			reset_n                                     : in    std_logic                     := 'X';             -- reset_n
 			clk_sdram_clk                               : out   std_logic;                                        -- clk
@@ -101,8 +102,9 @@
 			memory_mem_odt                              : out   std_logic;                                        -- mem_odt
 			memory_mem_dm                               : out   std_logic_vector(3 downto 0);                     -- mem_dm
 			memory_oct_rzqin                            : in    std_logic                     := 'X';             -- oct_rzqin
+			play_out_0_external_connection_export       : out   std_logic;                                        -- export
 			pll_0_locked_export                         : out   std_logic;                                        -- export
-			pll_audio_locked_export                     : out   std_logic;                                        -- export
+			reset_reset_n                               : in    std_logic                     := 'X';             -- reset_n
 			zs_addr_from_the_sdram                      : out   std_logic_vector(12 downto 0);                    -- addr
 			zs_ba_from_the_sdram                        : out   std_logic_vector(1 downto 0);                     -- ba
 			zs_cas_n_from_the_sdram                     : out   std_logic;                                        -- cas_n
@@ -120,8 +122,7 @@
 			out_port_from_the_td_reset_n                : out   std_logic;                                        -- export
 			in_port_to_the_td_status                    : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
 			uart_external_connection_rxd                : in    std_logic                     := 'X';             -- rxd
-			uart_external_connection_txd                : out   std_logic;                                        -- txd
-			play_out_0_external_connection_export       : out   std_logic                                         -- export
+			uart_external_connection_txd                : out   std_logic                                         -- txd
 		);
 	end component DE1_SoC_QSYS;
 
@@ -141,6 +142,7 @@
 			alt_vip_itc_0_clocked_video_vid_f           => CONNECTED_TO_alt_vip_itc_0_clocked_video_vid_f,           --                                     .vid_f
 			alt_vip_itc_0_clocked_video_vid_h           => CONNECTED_TO_alt_vip_itc_0_clocked_video_vid_h,           --                                     .vid_h
 			alt_vip_itc_0_clocked_video_vid_v           => CONNECTED_TO_alt_vip_itc_0_clocked_video_vid_v,           --                                     .vid_v
+			clk_clk                                     => CONNECTED_TO_clk_clk,                                     --                                  clk.clk
 			clk_50                                      => CONNECTED_TO_clk_50,                                      --                        clk_50_clk_in.clk
 			reset_n                                     => CONNECTED_TO_reset_n,                                     --                  clk_50_clk_in_reset.reset_n
 			clk_sdram_clk                               => CONNECTED_TO_clk_sdram_clk,                               --                            clk_sdram.clk
@@ -228,8 +230,9 @@
 			memory_mem_odt                              => CONNECTED_TO_memory_mem_odt,                              --                                     .mem_odt
 			memory_mem_dm                               => CONNECTED_TO_memory_mem_dm,                               --                                     .mem_dm
 			memory_oct_rzqin                            => CONNECTED_TO_memory_oct_rzqin,                            --                                     .oct_rzqin
+			play_out_0_external_connection_export       => CONNECTED_TO_play_out_0_external_connection_export,       --       play_out_0_external_connection.export
 			pll_0_locked_export                         => CONNECTED_TO_pll_0_locked_export,                         --                         pll_0_locked.export
-			pll_audio_locked_export                     => CONNECTED_TO_pll_audio_locked_export,                     --                     pll_audio_locked.export
+			reset_reset_n                               => CONNECTED_TO_reset_reset_n,                               --                                reset.reset_n
 			zs_addr_from_the_sdram                      => CONNECTED_TO_zs_addr_from_the_sdram,                      --                           sdram_wire.addr
 			zs_ba_from_the_sdram                        => CONNECTED_TO_zs_ba_from_the_sdram,                        --                                     .ba
 			zs_cas_n_from_the_sdram                     => CONNECTED_TO_zs_cas_n_from_the_sdram,                     --                                     .cas_n
@@ -247,7 +250,6 @@
 			out_port_from_the_td_reset_n                => CONNECTED_TO_out_port_from_the_td_reset_n,                --       td_reset_n_external_connection.export
 			in_port_to_the_td_status                    => CONNECTED_TO_in_port_to_the_td_status,                    --        td_status_external_connection.export
 			uart_external_connection_rxd                => CONNECTED_TO_uart_external_connection_rxd,                --             uart_external_connection.rxd
-			uart_external_connection_txd                => CONNECTED_TO_uart_external_connection_txd,                --                                     .txd
-			play_out_0_external_connection_export       => CONNECTED_TO_play_out_0_external_connection_export        --       play_out_0_external_connection.export
+			uart_external_connection_txd                => CONNECTED_TO_uart_external_connection_txd                 --                                     .txd
 		);
 

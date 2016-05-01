@@ -1,5 +1,5 @@
 Flow report for DE1_SOC_golden_top
-Fri Apr 15 20:59:07 2016
+Sun Apr 24 12:03:38 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,24 +41,24 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Apr 15 20:56:37 2016       ;
+; Flow Status                     ; Successful - Sun Apr 24 12:01:21 2016       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SOC_golden_top                          ;
 ; Top-level Entity Name           ; DE1_SOC_golden_top                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 12,955 / 32,070 ( 40 % )                    ;
-; Total registers                 ; 26728                                       ;
+; Logic utilization (in ALMs)     ; 13,011 / 32,070 ( 41 % )                    ;
+; Total registers                 ; 26860                                       ;
 ; Total pins                      ; 369 / 457 ( 81 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 1,977,984 / 4,065,280 ( 49 % )              ;
+; Total block memory bits         ; 1,978,496 / 4,065,280 ( 49 % )              ;
 ; Total DSP Blocks                ; 35 / 87 ( 40 % )                            ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 3 / 6 ( 50 % )                              ;
+; Total PLLs                      ; 2 / 6 ( 33 % )                              ;
 ; Total DLLs                      ; 1 / 4 ( 25 % )                              ;
 +---------------------------------+---------------------------------------------+
 
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/15/2016 20:30:38 ;
+; Start date & time ; 04/24/2016 11:35:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_SOC_golden_top  ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +---------------------------------------------------+----------------------------------------------------------------------------+---------------+----------------------------------+------------+
 ; Assignment Name                                   ; Value                                                                      ; Default Value ; Entity Name                      ; Section Id ;
 +---------------------------------------------------+----------------------------------------------------------------------------+---------------+----------------------------------+------------+
-; COMPILER_SIGNATURE_ID                             ; 220083049924901.146076662704516                                            ; --            ; --                               ; --         ;
+; COMPILER_SIGNATURE_ID                             ; 220083049924901.146151209701256                                            ; --            ; --                               ; --         ;
 ; ECO_REGENERATE_REPORT                             ; On                                                                         ; Off           ; --                               ; --         ;
 ; FITTER_EFFORT                                     ; Standard Fit                                                               ; Auto Fit      ; --                               ; --         ;
 ; HPS_ISW_FILE                                      ; DE1_SoC_QSYS/synthesis/submodules/sequencer/alt_types.pre.h                ; --            ; DE1_SoC_QSYS_hps_0_hps_io_border ; --         ;
@@ -142,8 +142,8 @@ agreement for further details.
 ; SLD_FILE                                          ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS.regmap                                 ; --            ; --                               ; --         ;
 ; SLD_FILE                                          ; DE1_SoC_QSYS/synthesis/DE1_SoC_QSYS.debuginfo                              ; --            ; --                               ; --         ;
 ; SLD_INFO                                          ; QSYS_NAME Audio HAS_SOPCINFO 1 GENERATION_ID 1458787544                    ; --            ; Audio                            ; --         ;
-; SLD_INFO                                          ; QSYS_NAME AudioClk HAS_SOPCINFO 1 GENERATION_ID 1458787627                 ; --            ; AudioClk                         ; --         ;
-; SLD_INFO                                          ; QSYS_NAME DE1_SoC_QSYS HAS_SOPCINFO 1 GENERATION_ID 1459995357             ; --            ; DE1_SoC_QSYS                     ; --         ;
+; SLD_INFO                                          ; QSYS_NAME AudioClk HAS_SOPCINFO 1 GENERATION_ID 1461455442                 ; --            ; AudioClk                         ; --         ;
+; SLD_INFO                                          ; QSYS_NAME DE1_SoC_QSYS HAS_SOPCINFO 1 GENERATION_ID 1461506743             ; --            ; DE1_SoC_QSYS                     ; --         ;
 ; SOPCINFO_FILE                                     ; AudioClk/synthesis/../../AudioClk.sopcinfo                                 ; --            ; --                               ; --         ;
 ; SOPCINFO_FILE                                     ; Audio/synthesis/../../Audio.sopcinfo                                       ; --            ; --                               ; --         ;
 ; SOPCINFO_FILE                                     ; DE1_SoC_QSYS/synthesis/../../DE1_SoC_QSYS.sopcinfo                         ; --            ; --                               ; --         ;
@@ -158,11 +158,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:04:07     ; 1.0                     ; 2135 MB             ; 00:04:47                           ;
-; Fitter                    ; 00:17:22     ; 1.3                     ; 4702 MB             ; 00:32:04                           ;
-; Assembler                 ; 00:00:38     ; 1.0                     ; 1223 MB             ; 00:00:38                           ;
-; TimeQuest Timing Analyzer ; 00:02:24     ; 2.2                     ; 2589 MB             ; 00:04:40                           ;
-; Total                     ; 00:24:31     ; --                      ; --                  ; 00:42:09                           ;
+; Analysis & Synthesis      ; 00:05:25     ; 1.0                     ; 2064 MB             ; 00:06:25                           ;
+; Fitter                    ; 00:16:27     ; 1.3                     ; 4689 MB             ; 00:34:05                           ;
+; Assembler                 ; 00:00:34     ; 1.0                     ; 1222 MB             ; 00:00:35                           ;
+; TimeQuest Timing Analyzer ; 00:02:11     ; 2.1                     ; 2588 MB             ; 00:04:11                           ;
+; Total                     ; 00:24:37     ; --                      ; --                  ; 00:45:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Apr 28 13:17:54 2016
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : soc_system
+Top-level Entity Name : Altera_Karaoke_DE1_Quartus_15_1
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 4,642 / 32,070 ( 14 % )
+Total registers : 6604
+Total pins : 138 / 457 ( 30 % )
+Total virtual pins : 0
+Total block memory bits : 735,232 / 4,065,280 ( 18 % )
+Total RAM Blocks : 92 / 397 ( 23 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,162 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst DE1_SoC_QSYS.sw -pg 1 -lvl 16 -y 1720
+preplace inst DE1_SoC_QSYS.hps_0.l3regs -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.user_packet_demux -pg 1
+preplace inst DE1_SoC_QSYS.sdram -pg 1 -lvl 16 -y 1840
+preplace inst DE1_SoC_QSYS.hps_0.fpgamgr -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.timer0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.timer1 -pg 1
+preplace inst DE1_SoC_QSYS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst DE1_SoC_QSYS.hps_0.clkmgr -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.sdmmc -pg 1
+preplace inst DE1_SoC_QSYS.clock_crossing_io_slow -pg 1 -lvl 15 -y 530
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.video_in -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.timer2 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.timer3 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.user_packet_mux -pg 1
+preplace inst DE1_SoC_QSYS.i2c_scl -pg 1 -lvl 16 -y 410
+preplace inst DE1_SoC_QSYS.clk_0 -pg 1 -lvl 1 -y 220
+preplace inst DE1_SoC_QSYS.sysid -pg 1 -lvl 16 -y 1640
+preplace inst DE1_SoC_QSYS.key -pg 1 -lvl 16 -y 1040
+preplace inst DE1_SoC_QSYS.hps_0.sdrctl -pg 1
+preplace inst DE1_SoC_QSYS.timer_0 -pg 1 -lvl 6 -y 1100
+preplace inst DE1_SoC_QSYS.i2c_end_flag_0 -pg 1 -lvl 6 -y 170
+preplace inst DE1_SoC_QSYS.alt_vip_cti_0 -pg 1 -lvl 6 -y 1240
+preplace inst DE1_SoC_QSYS.alt_vip_vfr_0 -pg 1 -lvl 3 -y 750
+preplace inst DE1_SoC_QSYS.alt_vip_csc_0 -pg 1 -lvl 10 -y 1150
+preplace inst DE1_SoC_QSYS.jtag_uart -pg 1 -lvl 16 -y 2240
+preplace inst DE1_SoC_QSYS.hps_fifo_aout_0 -pg 1 -lvl 17 -y 260
+preplace inst DE1_SoC_QSYS.hps_0.timer -pg 1
+preplace inst DE1_SoC_QSYS.cpu -pg 1 -lvl 5 -y 1270
+preplace inst DE1_SoC_QSYS.hps_0.clk_0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.i2c0 -pg 1
+preplace inst DE1_SoC_QSYS.clk_50 -pg 1 -lvl 1 -y 830
+preplace inst DE1_SoC_QSYS.hps_0.i2c1 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0 -pg 1 -lvl 12 -y 1170
+preplace inst DE1_SoC_QSYS.hps_0.usb0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.i2c2 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_mix_0 -pg 1 -lvl 15 -y 900
+preplace inst DE1_SoC_QSYS.i2c_data_0 -pg 1 -lvl 6 -y 30
+preplace inst DE1_SoC_QSYS.hps_fifo_ain_0 -pg 1 -lvl 17 -y 80
+preplace inst DE1_SoC_QSYS.hps_0.gmac0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.usb1 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.scaler_core -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.scheduler -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.gpio0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.i2c3 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.gmac1 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.gpio1 -pg 1
+preplace inst DE1_SoC_QSYS.timer -pg 1 -lvl 16 -y 2040
+preplace inst DE1_SoC_QSYS.hps_0.gpio2 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.f2s_periph_ref_clk -pg 1
+preplace inst DE1_SoC_QSYS.td_reset_n -pg 1 -lvl 16 -y 1940
+preplace inst DE1_SoC_QSYS.ledr -pg 1 -lvl 16 -y 1200
+preplace inst DE1_SoC_QSYS.i2c_sda -pg 1 -lvl 16 -y 610
+preplace inst DE1_SoC_QSYS.hps_0.arm_a9_0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.arm_a9_1 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.uart0 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_dil_0 -pg 1 -lvl 8 -y 1150
+preplace inst DE1_SoC_QSYS.hps_0.qspi -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.av_st_reset_bridge -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.uart1 -pg 1
+preplace inst DE1_SoC_QSYS.i2c_start_flag_0 -pg 1 -lvl 6 -y 430
+preplace inst DE1_SoC_QSYS.hps_0.sysmgr -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.hps_io -pg 1
+preplace inst DE1_SoC_QSYS.timer_stamp -pg 1 -lvl 16 -y 2420
+preplace inst DE1_SoC_QSYS.hps_0.wd_timer0 -pg 1
+preplace inst DE1_SoC_QSYS.pll_sys -pg 1 -lvl 2 -y 770
+preplace inst DE1_SoC_QSYS.hps_0.wd_timer1 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.kernel_creator -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.bridges -pg 1
+preplace inst DE1_SoC_QSYS.onchip_memory2 -pg 1 -lvl 16 -y 2340
+preplace inst DE1_SoC_QSYS.alt_vip_crs_0 -pg 1 -lvl 9 -y 1150
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.av_st_clk_bridge -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.scu -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.dcan0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.fpga_interfaces -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.dcan1 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.eosc1 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_itc_0 -pg 1 -lvl 16 -y 860
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.video_out -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_vfb_0 -pg 1 -lvl 13 -y 1170
+preplace inst DE1_SoC_QSYS.hps_0.rstmgr -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.arm_gic_0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.eosc2 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.dma -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cpr_0 -pg 1 -lvl 7 -y 1150
+preplace inst DE1_SoC_QSYS.hps_0.f2s_sdram_ref_clk -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.L2 -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_cpr_1 -pg 1 -lvl 14 -y 920
+preplace inst DE1_SoC_QSYS.hps_0 -pg 1 -lvl 4 -y 1040
+preplace inst DE1_SoC_QSYS.hpa_fifo_wav_0 -pg 1 -lvl 6 -y 290
+preplace inst DE1_SoC_QSYS.alt_vip_cpr_2 -pg 1 -lvl 14 -y 1150
+preplace inst DE1_SoC_QSYS.alt_vip_cl_scl_0.line_buffer -pg 1
+preplace inst DE1_SoC_QSYS.uart -pg 1 -lvl 16 -y 2520
+preplace inst DE1_SoC_QSYS.spi_0 -pg 1 -lvl 16 -y 1520
+preplace inst DE1_SoC_QSYS.hps_0.nand0 -pg 1
+preplace inst DE1_SoC_QSYS.td_status -pg 1 -lvl 16 -y 2140
+preplace inst DE1_SoC_QSYS.mm_clock_crossing_bridge_1 -pg 1 -lvl 15 -y 1150
+preplace inst DE1_SoC_QSYS.hps_0.axi_sdram -pg 1
+preplace inst DE1_SoC_QSYS.alt_vip_clip_0 -pg 1 -lvl 11 -y 1150
+preplace inst DE1_SoC_QSYS.hps_0.spim0 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.axi_ocram -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.spim1 -pg 1
+preplace inst DE1_SoC_QSYS.hps_0.hps_io.border -pg 1
+preplace inst DE1_SoC_QSYS.play_out_0 -pg 1 -lvl 6 -y 550
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)clk_0.clk_in,(SLAVE)DE1_SoC_QSYS.clk) 1 0 1 NJ
+preplace netloc FAN_IN<net_container>DE1_SoC_QSYS</net_container>(MASTER)alt_vip_vfb_0.read_master,(MASTER)alt_vip_vfb_0.write_master,(SLAVE)sdram.s1) 1 13 3 3520 1890 NJ 1890 NJ
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)sysid.clk,(SLAVE)i2c_scl.clk,(SLAVE)key.clk,(SLAVE)ledr.clk,(SLAVE)sw.clk,(SLAVE)clock_crossing_io_slow.m0_clk,(SLAVE)td_status.clk,(MASTER)pll_sys.outclk2,(SLAVE)td_reset_n.clk,(SLAVE)timer.clk,(SLAVE)i2c_sda.clk) 1 2 14 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 3770 740 4180
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_vfb_0.din,(MASTER)alt_vip_cl_scl_0.dout) 1 12 1 N
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)timer_0.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)i2c_end_flag_0.clk,(SLAVE)hps_0.f2h_axi_clock,(SLAVE)hpa_fifo_wav_0.clk_in,(SLAVE)hps_fifo_ain_0.clk_out,(SLAVE)i2c_data_0.clk,(SLAVE)i2c_start_flag_0.clk,(SLAVE)play_out_0.clk,(SLAVE)hps_fifo_aout_0.clk_in,(SLAVE)pll_sys.refclk,(MASTER)clk_50.clk,(SLAVE)hps_0.h2f_lw_axi_clock) 1 1 16 410 760 NJ 900 1010 1000 NJ 1090 1870 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 NJ 160 4470
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)td_status.external_connection,(SLAVE)DE1_SoC_QSYS.td_status_external_connection) 1 0 16 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ 2170 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)i2c_scl.external_connection,(SLAVE)DE1_SoC_QSYS.i2c_scl_external_connection) 1 0 16 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ 440 NJ 440 NJ 440 NJ 440 NJ 440 NJ 440 NJ 440 NJ 440 NJ 440 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.spi_0_external,(SLAVE)spi_0.external) 1 0 16 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ 1550 NJ
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)hpa_fifo_wav_0.clk_out,(SLAVE)hps_fifo_aout_0.clk_out,(SLAVE)hps_fifo_ain_0.clk_in,(MASTER)clk_0.clk) 1 1 16 NJ 230 NJ 230 NJ 230 NJ 230 1850 280 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 4430
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_itc_0.din,(MASTER)alt_vip_mix_0.dout) 1 15 1 4060
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)alt_vip_crs_0.dout,(SLAVE)alt_vip_csc_0.din) 1 9 1 N
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)i2c_start_flag_0.external_connection,(SLAVE)DE1_SoC_QSYS.i2c_start_flag_0_external_connection) 1 0 6 NJ 460 NJ 460 NJ 460 NJ 460 NJ 460 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(MASTER)DE1_SoC_QSYS.hps_fifo_aout_0_out,(MASTER)hps_fifo_aout_0.out) 1 17 1 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.alt_vip_cti_0_clocked_video,(SLAVE)alt_vip_cti_0.clocked_video) 1 0 6 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_cpr_0.din0,(MASTER)alt_vip_cti_0.dout) 1 6 1 2210
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_clip_0.din,(MASTER)alt_vip_csc_0.dout) 1 10 1 N
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.play_out_0_external_connection,(SLAVE)play_out_0.external_connection) 1 0 6 NJ 580 NJ 580 NJ 580 NJ 580 NJ 580 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.hps_io,(SLAVE)hps_0.hps_io) 1 0 4 NJ 1090 NJ 1090 NJ 1090 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)hps_0.f2h_irq0,(SLAVE)timer_0.irq) 1 4 2 NJ 1130 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)alt_vip_cpr_0.dout0,(SLAVE)alt_vip_dil_0.din) 1 7 1 N
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.sdram_wire,(SLAVE)sdram.wire) 1 0 16 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)clk_50.clk_in,(SLAVE)DE1_SoC_QSYS.clk_50_clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)td_reset_n.external_connection,(SLAVE)DE1_SoC_QSYS.td_reset_n_external_connection) 1 0 16 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ 1970 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_cpr_2.din0,(MASTER)alt_vip_vfb_0.dout) 1 13 1 N
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)alt_vip_vfr_0.avalon_master,(SLAVE)hps_0.f2h_axi_slave) 1 3 1 1110
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)i2c_sda.external_connection,(SLAVE)DE1_SoC_QSYS.i2c_sda_external_connection) 1 0 16 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 680 NJ 520 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.uart_external_connection,(SLAVE)uart.external_connection) 1 0 16 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ 2550 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.memory,(SLAVE)hps_0.memory) 1 0 4 NJ 1150 NJ 1150 NJ 1150 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(MASTER)DE1_SoC_QSYS.hps_0_h2f_reset_reset_n,(MASTER)hps_0.h2f_reset) 1 4 14 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1140 NJ 1140 NJ 1190 NJ 1190 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(MASTER)DE1_SoC_QSYS.clk_sdram,(MASTER)pll_sys.outclk1) 1 2 16 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 700 NJ 720 NJ 720 NJ 720 NJ
+preplace netloc INTERCONNECT<net_container>DE1_SoC_QSYS</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)key.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)hps_fifo_aout_0.in,(SLAVE)hps_fifo_ain_0.out,(SLAVE)i2c_start_flag_0.s1,(SLAVE)hpa_fifo_wav_0.in,(SLAVE)i2c_data_0.s1,(SLAVE)play_out_0.s1,(SLAVE)alt_vip_mix_0.control,(SLAVE)onchip_memory2.s1,(SLAVE)mm_clock_crossing_bridge_1.s0,(SLAVE)cpu.jtag_debug_module,(SLAVE)sw.s1,(SLAVE)timer_0.s1,(MASTER)cpu.instruction_master,(SLAVE)uart.s1,(SLAVE)ledr.s1,(SLAVE)timer_stamp.s1,(SLAVE)alt_vip_cti_0.control,(SLAVE)clock_crossing_io_slow.s0,(SLAVE)hpa_fifo_wav_0.in_csr,(MASTER)cpu.data_master,(SLAVE)hps_fifo_aout_0.in_csr,(SLAVE)hps_fifo_ain_0.out_csr,(SLAVE)i2c_end_flag_0.s1,(SLAVE)alt_vip_vfr_0.avalon_slave) 1 2 15 730 1200 NJ 1200 1520 1240 1910 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 3830 1120 4100 1170 4490
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.key_external_connection,(SLAVE)key.external_connection) 1 0 16 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 980 NJ 1070 NJ 1070 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.clk_50_clk_in_reset,(SLAVE)clk_50.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.i2c_data_0_external_connection,(SLAVE)i2c_data_0.external_connection) 1 0 6 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ
+preplace netloc INTERCONNECT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)sdram.reset,(SLAVE)i2c_start_flag_0.reset,(SLAVE)key.reset,(SLAVE)hps_fifo_ain_0.reset_in,(SLAVE)timer.reset,(MASTER)clk_0.clk_reset,(SLAVE)alt_vip_cti_0.is_clk_rst_reset,(SLAVE)sysid.reset,(SLAVE)hps_fifo_ain_0.reset_out,(SLAVE)td_reset_n.reset,(SLAVE)clock_crossing_io_slow.s0_reset,(SLAVE)alt_vip_vfb_0.reset,(SLAVE)ledr.reset,(SLAVE)hpa_fifo_wav_0.reset_out,(SLAVE)alt_vip_dil_0.reset,(SLAVE)cpu.reset_n,(SLAVE)alt_vip_cpr_1.reset,(MASTER)cpu.jtag_debug_module_reset,(MASTER)clk_50.clk_reset,(SLAVE)hps_fifo_aout_0.reset_out,(SLAVE)timer_0.reset,(SLAVE)clock_crossing_io_slow.m0_reset,(SLAVE)mm_clock_crossing_bridge_1.m0_reset,(SLAVE)alt_vip_cpr_0.reset,(SLAVE)alt_vip_vfr_0.clock_reset_reset,(SLAVE)play_out_0.reset,(SLAVE)i2c_scl.reset,(SLAVE)timer_stamp.reset,(SLAVE)i2c_data_0.reset,(SLAVE)alt_vip_cpr_2.reset,(SLAVE)alt_vip_mix_0.reset,(SLAVE)i2c_end_flag_0.reset,(SLAVE)alt_vip_crs_0.reset,(SLAVE)alt_vip_cl_scl_0.main_reset,(SLAVE)pll_sys.reset,(SLAVE)alt_vip_vfr_0.clock_master_reset,(SLAVE)i2c_sda.reset,(SLAVE)hpa_fifo_wav_0.reset_in,(SLAVE)alt_vip_clip_0.reset,(SLAVE)uart.reset,(SLAVE)hps_fifo_aout_0.reset_in,(SLAVE)sw.reset,(SLAVE)alt_vip_itc_0.is_clk_rst_reset,(SLAVE)jtag_uart.reset,(SLAVE)td_status.reset,(SLAVE)alt_vip_csc_0.reset,(SLAVE)spi_0.reset,(SLAVE)mm_clock_crossing_bridge_1.s0_reset,(SLAVE)onchip_memory2.reset1) 1 1 16 430 900 690 1240 NJ 1240 1500 1260 1970 1210 2250 1240 2460 1240 2620 1260 2800 1260 2960 1260 3120 1130 3320 1260 3560 1240 3790 1100 4140 520 4510
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_cl_scl_0.din,(MASTER)alt_vip_clip_0.dout) 1 11 1 N
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_cpr_1.din0,(MASTER)alt_vip_vfr_0.avalon_streaming_source) 1 3 11 1070 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ 950 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)pll_sys.locked,(SLAVE)DE1_SoC_QSYS.pll_0_locked) 1 0 2 NJ 800 NJ
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)timer.s1,(SLAVE)i2c_sda.s1,(SLAVE)td_status.s1,(MASTER)clock_crossing_io_slow.m0,(SLAVE)i2c_scl.s1,(SLAVE)td_reset_n.s1,(SLAVE)sysid.control_slave) 1 15 1 4200
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(MASTER)pll_sys.outclk3,(MASTER)DE1_SoC_QSYS.clk_vga) 1 2 16 NJ 720 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(MASTER)cpu.d_irq,(SLAVE)jtag_uart.irq,(SLAVE)spi_0.irq,(SLAVE)uart.irq,(SLAVE)timer.irq,(SLAVE)timer_stamp.irq) 1 5 11 1850 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ 1570 4120
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_crs_0.din,(MASTER)alt_vip_dil_0.dout) 1 8 1 N
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)spi_0.clk,(MASTER)pll_sys.outclk4,(SLAVE)mm_clock_crossing_bridge_1.m0_clk) 1 2 14 NJ 920 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 NJ 830 3750 1530 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.hps_fifo_ain_0_in,(SLAVE)hps_fifo_ain_0.in) 1 0 17 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ 140 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ 130 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_mix_0.din_0,(MASTER)alt_vip_cpr_1.dout0) 1 14 1 N
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)alt_vip_vfr_0.clock_reset,(SLAVE)alt_vip_cl_scl_0.main_clock,(SLAVE)cpu.clk,(SLAVE)alt_vip_csc_0.clock,(SLAVE)alt_vip_itc_0.is_clk_rst,(SLAVE)alt_vip_vfr_0.clock_master,(SLAVE)uart.clk,(SLAVE)timer_stamp.clk,(SLAVE)jtag_uart.clk,(SLAVE)clock_crossing_io_slow.s0_clk,(SLAVE)alt_vip_cpr_0.clock,(SLAVE)mm_clock_crossing_bridge_1.s0_clk,(SLAVE)sdram.clk,(SLAVE)alt_vip_dil_0.clock,(SLAVE)onchip_memory2.clk1,(MASTER)pll_sys.outclk0,(SLAVE)alt_vip_vfb_0.clock,(SLAVE)alt_vip_cti_0.is_clk_rst,(SLAVE)alt_vip_cpr_1.clock,(SLAVE)alt_vip_clip_0.clock,(SLAVE)alt_vip_mix_0.clock,(SLAVE)alt_vip_crs_0.clock,(SLAVE)alt_vip_cpr_2.clock) 1 2 14 650 940 NJ 850 1580 1180 1890 1090 2210 1140 2460 1140 2640 1240 2780 1240 2940 1240 3100 1110 3340 930 3580 910 3850 1030 4220
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)mm_clock_crossing_bridge_1.m0,(SLAVE)spi_0.spi_control_port) 1 15 1 4060
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)alt_vip_cpr_2.dout0,(SLAVE)alt_vip_mix_0.din_1) 1 14 1 3770
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.sw_external_connection,(SLAVE)sw.external_connection) 1 0 16 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ 1750 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.alt_vip_itc_0_clocked_video,(SLAVE)alt_vip_itc_0.clocked_video) 1 0 16 NJ 960 NJ 960 NJ 960 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)ledr.external_connection,(SLAVE)DE1_SoC_QSYS.ledr_external_connection) 1 0 16 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1200 NJ 1230 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.i2c_end_flag_0_external_connection,(SLAVE)i2c_end_flag_0.external_connection) 1 0 6 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(MASTER)DE1_SoC_QSYS.hpa_fifo_wav_0_out,(MASTER)hpa_fifo_wav_0.out) 1 6 12 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 250 NJ
+levelinfo -pg 1 0 200 4830
+levelinfo -hier DE1_SoC_QSYS 210 240 480 760 1310 1630 2060 2350 2520 2680 2840 3000 3210 3370 3640 3930 4280 4550 4660

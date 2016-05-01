@@ -14,6 +14,7 @@ module DE1_SoC_QSYS (
 	alt_vip_itc_0_clocked_video_vid_f,
 	alt_vip_itc_0_clocked_video_vid_h,
 	alt_vip_itc_0_clocked_video_vid_v,
+	clk_clk,
 	clk_50,
 	reset_n,
 	clk_sdram_clk,
@@ -101,8 +102,9 @@ module DE1_SoC_QSYS (
 	memory_mem_odt,
 	memory_mem_dm,
 	memory_oct_rzqin,
+	play_out_0_external_connection_export,
 	pll_0_locked_export,
-	pll_audio_locked_export,
+	reset_reset_n,
 	zs_addr_from_the_sdram,
 	zs_ba_from_the_sdram,
 	zs_cas_n_from_the_sdram,
@@ -120,8 +122,7 @@ module DE1_SoC_QSYS (
 	out_port_from_the_td_reset_n,
 	in_port_to_the_td_status,
 	uart_external_connection_rxd,
-	uart_external_connection_txd,
-	play_out_0_external_connection_export);	
+	uart_external_connection_txd);	
 
 	input		vid_clk_to_the_alt_vip_cti_0;
 	input	[7:0]	vid_data_to_the_alt_vip_cti_0;
@@ -137,6 +138,7 @@ module DE1_SoC_QSYS (
 	output		alt_vip_itc_0_clocked_video_vid_f;
 	output		alt_vip_itc_0_clocked_video_vid_h;
 	output		alt_vip_itc_0_clocked_video_vid_v;
+	input		clk_clk;
 	input		clk_50;
 	input		reset_n;
 	output		clk_sdram_clk;
@@ -224,8 +226,9 @@ module DE1_SoC_QSYS (
 	output		memory_mem_odt;
 	output	[3:0]	memory_mem_dm;
 	input		memory_oct_rzqin;
+	output		play_out_0_external_connection_export;
 	output		pll_0_locked_export;
-	output		pll_audio_locked_export;
+	input		reset_reset_n;
 	output	[12:0]	zs_addr_from_the_sdram;
 	output	[1:0]	zs_ba_from_the_sdram;
 	output		zs_cas_n_from_the_sdram;
@@ -244,5 +247,4 @@ module DE1_SoC_QSYS (
 	input	[1:0]	in_port_to_the_td_status;
 	input		uart_external_connection_rxd;
 	output		uart_external_connection_txd;
-	output		play_out_0_external_connection_export;
 endmodule

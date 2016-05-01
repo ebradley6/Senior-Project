@@ -965,6 +965,7 @@ set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION ON
 set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[22]
 set_location_assignment PIN_AK24 -to GPIO_1[22]
+set_global_assignment -name VERILOG_FILE clock_500.v
 set_global_assignment -name VERILOG_FILE Mixer.v
 set_global_assignment -name VERILOG_FILE i2c.v
 set_global_assignment -name QIP_FILE AudioClk/synthesis/AudioClk.qip

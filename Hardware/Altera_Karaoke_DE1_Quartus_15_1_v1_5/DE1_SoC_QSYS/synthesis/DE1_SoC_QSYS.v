@@ -18,6 +18,7 @@ module DE1_SoC_QSYS (
 		output wire        alt_vip_itc_0_clocked_video_vid_f,           //                                     .vid_f
 		output wire        alt_vip_itc_0_clocked_video_vid_h,           //                                     .vid_h
 		output wire        alt_vip_itc_0_clocked_video_vid_v,           //                                     .vid_v
+		input  wire        clk_clk,                                     //                                  clk.clk
 		input  wire        clk_50,                                      //                        clk_50_clk_in.clk
 		input  wire        reset_n,                                     //                  clk_50_clk_in_reset.reset_n
 		output wire        clk_sdram_clk,                               //                            clk_sdram.clk
@@ -107,7 +108,7 @@ module DE1_SoC_QSYS (
 		input  wire        memory_oct_rzqin,                            //                                     .oct_rzqin
 		output wire        play_out_0_external_connection_export,       //       play_out_0_external_connection.export
 		output wire        pll_0_locked_export,                         //                         pll_0_locked.export
-		output wire        pll_audio_locked_export,                     //                     pll_audio_locked.export
+		input  wire        reset_reset_n,                               //                                reset.reset_n
 		output wire [12:0] zs_addr_from_the_sdram,                      //                           sdram_wire.addr
 		output wire [1:0]  zs_ba_from_the_sdram,                        //                                     .ba
 		output wire        zs_cas_n_from_the_sdram,                     //                                     .cas_n
@@ -189,7 +190,6 @@ module DE1_SoC_QSYS (
 	wire          alt_vip_cpr_2_dout0_startofpacket;                             // alt_vip_cpr_2:dout0_startofpacket -> alt_vip_mix_0:din_1_startofpacket
 	wire          alt_vip_cpr_2_dout0_endofpacket;                               // alt_vip_cpr_2:dout0_endofpacket -> alt_vip_mix_0:din_1_endofpacket
 	wire          pll_sys_outclk0_clk;                                           // pll_sys:outclk_0 -> [alt_vip_cl_scl_0:main_clock, alt_vip_clip_0:clock, alt_vip_cpr_0:clock, alt_vip_cpr_1:clock, alt_vip_cpr_2:clock, alt_vip_crs_0:clock, alt_vip_csc_0:clock, alt_vip_cti_0:is_clk, alt_vip_dil_0:clock, alt_vip_itc_0:is_clk, alt_vip_mix_0:clock, alt_vip_vfb_0:clock, alt_vip_vfr_0:clock, alt_vip_vfr_0:master_clock, clock_crossing_io_slow:s0_clk, cpu:clk, irq_mapper:clk, irq_synchronizer:sender_clk, irq_synchronizer_001:sender_clk, jtag_uart:clk, mm_clock_crossing_bridge_1:s0_clk, mm_interconnect_0:pll_sys_outclk0_clk, mm_interconnect_1:pll_sys_outclk0_clk, mm_interconnect_4:pll_sys_outclk0_clk, onchip_memory2:clk, rst_controller:clk, rst_controller_004:clk, sdram:clk, timer_stamp:clk, uart:clk]
-	wire          pll_audio_outclk0_clk;                                         // pll_audio:outclk_0 -> [fifo_0:rdclock, rst_controller_003:clk]
 	wire          pll_sys_outclk2_clk;                                           // pll_sys:outclk_2 -> [clock_crossing_io_slow:m0_clk, i2c_scl:clk, i2c_sda:clk, irq_synchronizer:receiver_clk, key:clk, ledr:clk, mm_interconnect_1:pll_sys_outclk2_clk, mm_interconnect_2:pll_sys_outclk2_clk, rst_controller_001:clk, sw:clk, sysid:clock, td_reset_n:clk, td_status:clk, timer:clk]
 	wire          pll_sys_outclk4_clk;                                           // pll_sys:outclk_4 -> [irq_synchronizer_001:receiver_clk, mm_clock_crossing_bridge_1:m0_clk, mm_interconnect_3:pll_sys_outclk4_clk, rst_controller_005:clk, spi_0:clk]
 	wire  [127:0] alt_vip_vfr_0_avalon_master_readdata;                          // mm_interconnect_0:alt_vip_vfr_0_avalon_master_readdata -> alt_vip_vfr_0:master_readdata
@@ -901,7 +901,7 @@ module DE1_SoC_QSYS (
 	DE1_SoC_QSYS_fifo_0 fifo_0 (
 		.wrclock                          (clk_50),                                    //    clk_in.clk
 		.wrreset_n                        (~rst_controller_002_reset_out_reset),       //  reset_in.reset_n
-		.rdclock                          (pll_audio_outclk0_clk),                     //   clk_out.clk
+		.rdclock                          (clk_clk),                                   //   clk_out.clk
 		.rdreset_n                        (~rst_controller_003_reset_out_reset),       // reset_out.reset_n
 		.avalonmm_write_slave_writedata   (mm_interconnect_1_fifo_0_in_writedata),     //        in.writedata
 		.avalonmm_write_slave_write       (mm_interconnect_1_fifo_0_in_write),         //          .write
@@ -1257,13 +1257,6 @@ module DE1_SoC_QSYS (
 		.chipselect (mm_interconnect_1_play_out_0_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_1_play_out_0_s1_readdata),   //                    .readdata
 		.out_port   (play_out_0_external_connection_export)       // external_connection.export
-	);
-
-	DE1_SoC_QSYS_pll_audio pll_audio (
-		.refclk   (clk_50),                  //  refclk.clk
-		.rst      (~reset_n),                //   reset.reset
-		.outclk_0 (pll_audio_outclk0_clk),   // outclk0.clk
-		.locked   (pll_audio_locked_export)  //  locked.export
 	);
 
 	DE1_SoC_QSYS_pll_sys pll_sys (
@@ -1952,7 +1945,7 @@ module DE1_SoC_QSYS (
 	);
 
 	altera_reset_controller #(
-		.NUM_RESET_INPUTS          (1),
+		.NUM_RESET_INPUTS          (2),
 		.OUTPUT_RESET_SYNC_EDGES   ("deassert"),
 		.SYNC_DEPTH                (2),
 		.RESET_REQUEST_PRESENT     (0),
@@ -1978,11 +1971,11 @@ module DE1_SoC_QSYS (
 		.ADAPT_RESET_REQUEST       (0)
 	) rst_controller_003 (
 		.reset_in0      (~reset_n),                           // reset_in0.reset
-		.clk            (pll_audio_outclk0_clk),              //       clk.clk
+		.reset_in1      (~reset_reset_n),                     // reset_in1.reset
+		.clk            (clk_clk),                            //       clk.clk
 		.reset_out      (rst_controller_003_reset_out_reset), // reset_out.reset
 		.reset_req      (),                                   // (terminated)
 		.reset_req_in0  (1'b0),                               // (terminated)
-		.reset_in1      (1'b0),                               // (terminated)
 		.reset_req_in1  (1'b0),                               // (terminated)
 		.reset_in2      (1'b0),                               // (terminated)
 		.reset_req_in2  (1'b0),                               // (terminated)

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/altera_up_avalon_reset_from_locked_signal.v"
+   type="VERILOG"
+   library="reset_from_locked" />
+ <file
+   path="simulation/submodules/AudioClk_audio_pll_0_audio_pll.vho"
+   type="VHDL"
+   library="audio_pll" />
+ <file
+   path="simulation/submodules/AudioClk_audio_pll_0.vhd"
+   type="VHDL"
+   library="audio_pll_0" />
+ <file path="simulation/AudioClk.vhd" type="VHDL" />
+ <topLevel name="AudioClk" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

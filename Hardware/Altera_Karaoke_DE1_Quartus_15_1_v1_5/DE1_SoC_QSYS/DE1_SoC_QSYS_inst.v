@@ -13,6 +13,7 @@
 		.alt_vip_itc_0_clocked_video_vid_f           (<connected-to-alt_vip_itc_0_clocked_video_vid_f>),           //                                     .vid_f
 		.alt_vip_itc_0_clocked_video_vid_h           (<connected-to-alt_vip_itc_0_clocked_video_vid_h>),           //                                     .vid_h
 		.alt_vip_itc_0_clocked_video_vid_v           (<connected-to-alt_vip_itc_0_clocked_video_vid_v>),           //                                     .vid_v
+		.clk_clk                                     (<connected-to-clk_clk>),                                     //                                  clk.clk
 		.clk_50                                      (<connected-to-clk_50>),                                      //                        clk_50_clk_in.clk
 		.reset_n                                     (<connected-to-reset_n>),                                     //                  clk_50_clk_in_reset.reset_n
 		.clk_sdram_clk                               (<connected-to-clk_sdram_clk>),                               //                            clk_sdram.clk
@@ -100,8 +101,9 @@
 		.memory_mem_odt                              (<connected-to-memory_mem_odt>),                              //                                     .mem_odt
 		.memory_mem_dm                               (<connected-to-memory_mem_dm>),                               //                                     .mem_dm
 		.memory_oct_rzqin                            (<connected-to-memory_oct_rzqin>),                            //                                     .oct_rzqin
+		.play_out_0_external_connection_export       (<connected-to-play_out_0_external_connection_export>),       //       play_out_0_external_connection.export
 		.pll_0_locked_export                         (<connected-to-pll_0_locked_export>),                         //                         pll_0_locked.export
-		.pll_audio_locked_export                     (<connected-to-pll_audio_locked_export>),                     //                     pll_audio_locked.export
+		.reset_reset_n                               (<connected-to-reset_reset_n>),                               //                                reset.reset_n
 		.zs_addr_from_the_sdram                      (<connected-to-zs_addr_from_the_sdram>),                      //                           sdram_wire.addr
 		.zs_ba_from_the_sdram                        (<connected-to-zs_ba_from_the_sdram>),                        //                                     .ba
 		.zs_cas_n_from_the_sdram                     (<connected-to-zs_cas_n_from_the_sdram>),                     //                                     .cas_n
@@ -119,7 +121,6 @@
 		.out_port_from_the_td_reset_n                (<connected-to-out_port_from_the_td_reset_n>),                //       td_reset_n_external_connection.export
 		.in_port_to_the_td_status                    (<connected-to-in_port_to_the_td_status>),                    //        td_status_external_connection.export
 		.uart_external_connection_rxd                (<connected-to-uart_external_connection_rxd>),                //             uart_external_connection.rxd
-		.uart_external_connection_txd                (<connected-to-uart_external_connection_txd>),                //                                     .txd
-		.play_out_0_external_connection_export       (<connected-to-play_out_0_external_connection_export>)        //       play_out_0_external_connection.export
+		.uart_external_connection_txd                (<connected-to-uart_external_connection_txd>)                 //                                     .txd
 	);
 

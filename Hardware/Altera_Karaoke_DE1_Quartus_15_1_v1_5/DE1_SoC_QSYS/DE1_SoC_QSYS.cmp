@@ -14,6 +14,7 @@
 			alt_vip_itc_0_clocked_video_vid_f           : out   std_logic;                                        -- vid_f
 			alt_vip_itc_0_clocked_video_vid_h           : out   std_logic;                                        -- vid_h
 			alt_vip_itc_0_clocked_video_vid_v           : out   std_logic;                                        -- vid_v
+			clk_clk                                     : in    std_logic                     := 'X';             -- clk
 			clk_50                                      : in    std_logic                     := 'X';             -- clk
 			reset_n                                     : in    std_logic                     := 'X';             -- reset_n
 			clk_sdram_clk                               : out   std_logic;                                        -- clk
@@ -103,7 +104,7 @@
 			memory_oct_rzqin                            : in    std_logic                     := 'X';             -- oct_rzqin
 			play_out_0_external_connection_export       : out   std_logic;                                        -- export
 			pll_0_locked_export                         : out   std_logic;                                        -- export
-			pll_audio_locked_export                     : out   std_logic;                                        -- export
+			reset_reset_n                               : in    std_logic                     := 'X';             -- reset_n
 			zs_addr_from_the_sdram                      : out   std_logic_vector(12 downto 0);                    -- addr
 			zs_ba_from_the_sdram                        : out   std_logic_vector(1 downto 0);                     -- ba
 			zs_cas_n_from_the_sdram                     : out   std_logic;                                        -- cas_n

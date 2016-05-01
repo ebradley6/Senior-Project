@@ -42,6 +42,7 @@
 //                   moved to software; plays instrumental track
 //         v1_5:     Mixes instrumental track with audio in
 // ============================================================================
+
 `define ENABLE_HPS
 
 module DE1_SOC_golden_top(
@@ -254,11 +255,6 @@ wire         START;
 //wire         VOL_FLAG_RR;
 wire         PLAY;
 
-wire  [31:0] INSTRUMENTAL_IN;
-wire  [31:0] AUDIO_OUT;
-wire         READY;
-wire         VALID;
-
 wire  [31:0] ADC_DATA_L;
 wire  [31:0] ADC_DATA_R;
 wire         ADC_READY_L;
@@ -299,7 +295,7 @@ assign TD_RESET_N = reset_n & nios_td_reset_n;
 DE1_SoC_QSYS u0 (
 	 
         .clk_50                                 (CLOCK_50),                                 //                       clk_50_clk_in.clk
-        .reset_n                                (reset_n & hps_fpga_reset_n),                                //                 clk_50_clk_in_reset.reset_n
+        .reset_n                                (1'b1),                                //                 clk_50_clk_in_reset.reset_n
         .clk_sdram_clk                          (DRAM_CLK),                           //                           altpll_c1.clk
         .clk_vga_clk                            (VGA_CLK),                          //                         altpll_0_c2.clk
 		  // VGA
@@ -325,8 +321,8 @@ DE1_SoC_QSYS u0 (
         .vid_locked_to_the_alt_vip_cti_0        (1'b1),        //                                    .vid_locked
 		  
 		  // I2C (TV Decoder)
-        .out_port_from_the_i2c_scl              (sclk),//(FPGA_I2C_SCLK),              //         i2c_scl_external_connection.export
-        .bidir_port_to_and_from_the_i2c_sda     (sda),//(FPGA_I2C_SDAT),     //         i2c_sda_external_connection.export
+        //.out_port_from_the_i2c_scl              (sclk),//(FPGA_I2C_SCLK),              //         i2c_scl_external_connection.export
+        //.bidir_port_to_and_from_the_i2c_sda     (sda),//(FPGA_I2C_SDAT),     //         i2c_sda_external_connection.export
 		  
 			// sdram
         .zs_addr_from_the_sdram                 (DRAM_ADDR),                 //                          sdram_wire.addr
@@ -345,7 +341,7 @@ DE1_SoC_QSYS u0 (
 		  
 		  //pio
 		  //.sw_external_connection_export         (SW),     //     sw_external_connection.export
-		  .ledr_external_connection_export       (LEDR),
+		  //.ledr_external_connection_export       (LEDR),
 		  //.key_external_connection_export        (KEY),     //   ledr_external_connection.export
 		  .play_out_0_external_connection_export       (PLAY),  
 		  //.vol_ctrl_0_external_connection_export       (VOL_DATA),       //       vol_ctrl_0_external_connection.export
@@ -471,7 +467,8 @@ DE1_SoC_QSYS u0 (
         .hps_io_hps_io_gpio_inst_GPIO53  ( HPS_LED),  //                               .hps_io_gpio_inst_GPIO53
         .hps_io_hps_io_gpio_inst_GPIO54  ( HPS_KEY),  //                               .hps_io_gpio_inst_GPIO54
         .hps_io_hps_io_gpio_inst_GPIO61  ( HPS_GSENSOR_INT),  //                               .hps_io_gpio_inst_GPIO61
-		  
+		  .clk_clk                                     (audio_clk),
+		  .reset_reset_n                               (1'b1)  
 		  
     );
 
@@ -484,7 +481,7 @@ AudioClk u1 (
 );
 
 Audio u2 (
-		.clk         (CLOCK_50),         //                clk.clk
+		.clk         (audio_clk),         //                clk.clk
 		.reset       (audio_reset),       //              reset.reset
 		//.address     (<connected-to-address>),     // avalon_audio_slave.address
 		//.chipselect  (<connected-to-chipselect>),  //                   .chipselect
@@ -511,24 +508,24 @@ Audio u2 (
 		.to_dac_right_channel_valid   (DAC_VALID_R),   //                            .valid
 		.to_dac_right_channel_ready   (DAC_READY_R)    //                            .ready
 );
-/*
+
 //I2C output data
 CLOCK_500	 u3(
 					 .CLOCK(CLOCK_50),
-					 .END(END),
+					 //.END(END),
 					 .CLOCK_500(CLK_1M),
-					 .GO(GO),
-					 .VOL_IN(VOL_DATA),
-					 .CLOCK_2(AUD_XCK),
-					 .VOL_FLAG(VOL_FLAG),
-					 .VOL_SET(VOL_SET),
-					 .VOL_FLAG_RR(VOL_FLAG_RR),
-					 .DATA(AUD_I2C_DATA)
+					 //.GO(GO),
+					 //.VOL_IN(VOL_DATA),
+					 .CLOCK_2(AUD_XCK)
+					 //.VOL_FLAG(VOL_FLAG),
+					 //.VOL_SET(VOL_SET),
+					 //.VOL_FLAG_RR(VOL_FLAG_RR),
+					 //.DATA(AUD_I2C_DATA)
 );
-*/
+
 					 
 //i2c controller
-i2c			 u3( // Host Side
+i2c			 u4( // Host Side
 					 .CLOCK(CLK_1M),
 					 .RESET(1'b1),
 					  // I2C Side
@@ -541,7 +538,7 @@ i2c			 u3( // Host Side
 );
 	 
 	 
-Mixer        u4(
+Mixer        u5(
 						.play_in(PLAY),
 						.valid_in_fifo(FIFO_VALID),
 						.ready_out_fifo(FIFO_READY),
