@@ -1,4 +1,11 @@
-%%% Real-Time Speech Pitch Correction
+%%% Real-Time Speech Pitch Shifting on an FPGA
+%%% Estephan, Sawyer, Wanninger
+%%% M-File by Habib Estephan (2006)
+%%% Villanova University
+%%% Department of Electrical and Computer Engineering
+
+%%% Modified by: Ikenna Uzoije
+%%% Added parameters for easier conversion to Verilog using the HDL Coder
 
 function [OutputReal, xx1, yy1] = upshifter(inData, WindSize, xx, yy)
 
