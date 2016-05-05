@@ -1,0 +1,3 @@
+Terasic's Control Panel Project. Just recomplied on my computer's Quartus. Posted here for easy access.
+This example works, so if anyone needs to double check that the VGA, keyboard, etc. are connected correctly to the board, 
+this example's output files can be used.
