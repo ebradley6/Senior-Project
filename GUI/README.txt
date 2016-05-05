@@ -30,5 +30,4 @@ to set up Qt creator to compile for the DE1 board refer to "DE1-SoC_Control_Pane
 
 you will also need to download the tar specified in "DE1-SoC_Control_Panel.pdf" and copy it to the board to replace the existing Qt library on the "Linux Console with framebuffer" image
 
-wav files used found in WAV.zip
 lrc files found in "lrc files" folder
