@@ -25,6 +25,7 @@ Play lyrics and FIFO through console (no gui)
 
 
 to run Linux on the DE1-SoC board refer to http://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=836&PartNo=4 and download the "Linux Console with framebuffer" image
+to run new Qt projects on the Linux image replace the qt library in /home/root with the Qt tar "qt-4.8.5-altera-soc.tar.bz2" on our website as instructed in 6 of the "DE1-SoC_Control_Panel.pdf" mentioned below
 
 to set up Qt creator to compile for the DE1 board refer to "DE1-SoC_Control_Panel.pdf" from http://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=836&PartNo=4
 
