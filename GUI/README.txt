@@ -12,16 +12,16 @@
 Play lyrics and FIFO through console (no gui)
 
  1.0
- GUI with needed buttons and boxes
+ GUI with needed buttons and boxes, executable file is basicGUI with no file extension
 
  1.1
- GUI displaying lyrics using DE1 timer
+ GUI displaying lyrics using DE1 timer, executable file is Karaoke with no file extension
 
  1.2
- GUI with lyrics and audio in = audio out (expo build)
+ GUI with lyrics and audio in = audio out (expo build), executable file is Karaoke with no file extension
 
  1.3
- GUI with software auto-tune
+ GUI with software auto-tune, executable file is Karaoke with no file extension
 
 
 to run Linux on the DE1-SoC board refer to http://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&CategoryNo=205&No=836&PartNo=4 and download the "Linux Console with framebuffer" image
